@@ -1,0 +1,22 @@
+<div class=>
+  <div class=>
+
+    <% if @user.profile_photo %>
+      <%= cl_image_tag @user.profile_photo, class: "avatar-xlarge"%>
+    <% end %>
+    <div>
+      <% if @user == current_user %>
+        <%= link_to "Edit profile", update_user_path(current_user) %>
+      <% end %>
+    </div>
+  </div>
+  <div style="margin-top: 25px; margin-bottom:25px ">
+    <hr>
+  </div>
+  <p><b><%= @user.name %>'s profile:</b></p>
+  <div class=>
+    <p>Name: <%= @user.name %></p>
+    <p>E-Mail: <%= @user.email %></p>
+    <p>Info:</p>
+  </div>
+</div>
