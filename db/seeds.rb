@@ -11,5 +11,31 @@ require "open-uri"
 Workflow.destroy_all
 User.destroy_all
 
-User.create!(first_name: "Dave", last_name: "Sellick", user_name: "Sidgrove", email: "dave@pushflo.com", password:"1234567")
-puts "created user"
+10.times do
+  User.create!(
+    first_name: Faker::Name.name,
+    last_name: Faker::Name.name,
+    user_name: Faker::Name.name,
+    email: Faker::Internet.email,
+    password:"1234567"
+  )
+  puts "created user"
+end
+
+10.times do
+  Workflow.create!(
+    title: Faker::ProgrammingLanguage.name,
+    description: Faker::Lorem.sentence,
+    walkthrough: Faker::Lorem.paragraphs,
+    program: Faker::ProgrammingLanguage.name
+  )
+  puts "created workflow"
+end
+
+10.times do
+  Favourite.create!(
+    user_id: rand(1..10),
+    workflow_id: rand(1..10)
+  )
+  puts "created favourite"
+end

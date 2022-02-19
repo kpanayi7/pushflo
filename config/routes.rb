@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resources :workflows, only: [:new, :create, :update, :edit]
   resources :workflows, only: [:index, :show]
-  get 'workflows/:id', to: 'workflows#index_by_program', as: :program
+  get 'workflows', to: 'workflows#index_by_program', as: :program
 
   get 'users/:id/favourites', to: 'favourites#index', as: 'favourites'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
