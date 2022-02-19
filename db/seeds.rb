@@ -11,5 +11,5 @@ require "open-uri"
 Workflow.destroy_all
 User.destroy_all
 
-user_1 = User.create!(first_name:"Dave", last_name:"Sellick", user_name:"Sidgrove", email:"dave@pushflo.com", password:"1234567")
+User.create!(first_name: "Dave", last_name: "Sellick", user_name: "Sidgrove", email: "dave@pushflo.com", password:"1234567")
 puts "created user"
