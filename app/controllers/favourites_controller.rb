@@ -2,11 +2,11 @@ class FavouritesController < ApplicationController
     before_action :find_favourite, only: %i[show]
 
   def index
-    @favourites = favourite.where(user: current_user)
+    @favourites = Favourite.where(user: current_user)
   end
 
   def show
-    @favourite = favourite.find(params[:id])
+    @favourite = Favourite.find(params[:id])
   end
 
   def new
@@ -16,7 +16,7 @@ class FavouritesController < ApplicationController
   end
 
   def create
-    @favourite = favourite.new(favourite_params)
+    @favourite = Favourite.new(favourite_params)
     @favourite.workflow = Workflow.find(params[:workflow_id])
     @favourite.user = current_user
     if @favourite.save
@@ -29,7 +29,7 @@ class FavouritesController < ApplicationController
   private
 
   def find_favourite
-    @favourite = favourite.find(params[:id])
+    @favourite = Favourite.find(params[:id])
   end
 
   def favourite_params
