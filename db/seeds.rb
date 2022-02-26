@@ -8,8 +8,13 @@ require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Favourite.destroy_all
 Workflow.destroy_all
 User.destroy_all
+
+User.create!(first_name:"Dave", last_name:"Sellick", user_name:"dave", email:"dave@pushflo.com", password:"1234567")
+puts "created user"
+
 
 10.times do
   User.create!(
