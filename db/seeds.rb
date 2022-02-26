@@ -12,7 +12,7 @@ Favourite.destroy_all
 Workflow.destroy_all
 User.destroy_all
 
-User.create!(first_name:"Dave", last_name:"Sellick", user_name:"dave", email:"dave@pushflo.com", password:"1234567")
+User.create!(first_name:"Dave", last_name:"Sellick", user_name:"dave", email:"dave@pushflo.com", password:"1234567", admin: true)
 puts "created user"
 
 
