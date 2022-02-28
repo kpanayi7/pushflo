@@ -35,10 +35,20 @@ require("packs/pricing")
 require("packs/sidebarMenu")
 require("packs/tnsSlider")
 require("packs/tooltip")
-
+import "./theme.min"
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+//  if ($(".headingTyped").length) {
+//     var typed = new Typed('.headingTyped', {
+//       strings: ["First", "Second"],
+//       typeSpeed: 40,
+//       backSpeed: 40,
+//       backDelay: 1000,
+//       loop: true
+//     });
+//   }
