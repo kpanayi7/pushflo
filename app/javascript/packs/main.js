@@ -321,7 +321,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
   if ($(".headingTyped").length) {
     var typed = new Typed('.headingTyped', {
-      strings: ["Skills", "Products ", "Teams", "Future"],
+      strings: ["First", "Second"],
       typeSpeed: 40,
       backSpeed: 40,
       backDelay: 1000,
