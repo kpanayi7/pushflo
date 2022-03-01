@@ -321,7 +321,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
 
   if ($(".headingTyped").length) {
     var typed = new Typed('.headingTyped', {
-      strings: ["First", "Second"],
+      strings: ["Notion", "Excel", "Outlook","Xero","Ableton","Premier","Gsheets","Slack", "Asana"],
       typeSpeed: 40,
       backSpeed: 40,
       backDelay: 1000,
