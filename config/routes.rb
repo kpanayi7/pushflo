@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: 'pages#home'
-  get 'users/:id', to: 'users#show', as: 'profile'
+  # get 'users/:id', to: 'users#show', as: 'profile'
+  get 'profile', to: 'users#show'
   get 'users/:id/edit', to: 'users#edit', as: 'update_user'
   patch 'users/:id', to: 'users#update', as: 'edit_user'
   put 'users/:id', to: 'users#update'
