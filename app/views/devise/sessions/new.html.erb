@@ -3,12 +3,12 @@
     <div class="row align-items-center justify-content-center pt-12 pb-20">
       <div class="col-lg-6 col-md-8 py-8 py-xl-0 ">
         <!-- Card -->
-        <div class="card shadow pb-10 pt-6 px-6">
-            <a href=""><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_56/v1645875304/Pushflo/Branding/Icon_multicolour_g7gkay.png" class="mb-4" alt=""></a>
-            <h1 class="display-5 fw-bold pb-lg-4">Sign in 👋</h1>
+        <div class="card shadow pb-10 pt-6 px-6 ">
+            <a href="" class= "d-flex justify-content-center" ><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_56/v1645875304/Pushflo/Branding/Icon_multicolour_g7gkay.png" class="mb-4 " alt=""></a>
+            <h1 class="display-5 fw-bold pb-lg-4 d-flex justify-content-center">Sign in 👋</h1>
 
               <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                <div class="form-inputs text-dark-primary ">
+                <div class="form-inputs text-dark-primary px-10 ">
                   <%= f.input :email,
                               required: false,
                               autofocus: true,
@@ -19,8 +19,8 @@
                   <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
                 </div>
 
-                <div class="form-actions py-4">
-                  <%= f.button :submit, "Sign in", class: "btn btn-primary card-hover" %>
+                <div class="form-actions py-4 px-10">
+                  <%= f.button :submit, "Sign in", class: "btn btn-primary card-hover " %>
                 </div>
               <% end %>
 

@@ -46,3 +46,43 @@ end
   )
   puts "created favourite"
 end
+
+
+5.times do
+  Favourite.create!(
+    user_id: 1,
+    workflow_id: rand(1..10)
+  )
+  puts "created favourite"
+end
+
+
+Workflow.create!(
+    title: "Automating Excel Borders",
+    description: "Smashing out all the borders and that",
+    walkthrough: "This is how you bosh borders on the fly",
+    program: "Excel",
+    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
+    user_id: 1
+)
+  puts "created workflow"
+
+Workflow.create!(
+    title: "Top Notion Shortcuts",
+    description: "Smashing out all the Notion shortcuts and that",
+    walkthrough: "This is how you bosh Notion shortcuts on the fly",
+    program: "Notion",
+    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
+    user_id: 1
+)
+  puts "created workflow"
+
+Workflow.create!(
+    title: "Top Gmail Textstrings",
+    description: "Smashing out all the Gmail textstings and that",
+    walkthrough: "This is how you bosh Gmail textstings on the fly",
+    program: "Gmail",
+    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
+    user_id: 1
+)
+  puts "created workflow"

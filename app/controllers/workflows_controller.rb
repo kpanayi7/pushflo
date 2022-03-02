@@ -19,6 +19,11 @@ class WorkflowsController < ApplicationController
     @favourite = Favourite.new
   end
 
+  def uploads
+    @workflows = Workflow.all
+
+  end
+
   private
 
   def workflow_params
