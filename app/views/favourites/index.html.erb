@@ -131,7 +131,7 @@
 
               <div class="row">
                 <div class="offset-lg-3 col-lg-6 col-md-12 col-12 text-center mt-5">
-                  <p>You’ve reached the end of the list</p>
+
                 </div>
               </div>
             </div>
@@ -142,17 +142,19 @@
 
 
               <div class="row">
-                <% @favourites.each do |favourite|%>
+                <% Workflow.all.each do |upload|%>
+                  <% if upload.user_id == current_user.id
+                  then %>
                 <div class="col-lg-3 col-md-6 col-12">
 
 
                   <!-- Card -->
                   <div class="card  mb-4 card-hover">
-                    <iframe  class="card-img-top" src= <%= Workflow.find(favourite.workflow_id).loom_url.gsub(/\bshare\b/, 'embed') %> alt=""
+                    <iframe  class="card-img-top" src= <%= Workflow.find(upload.id).loom_url.gsub(/\bshare\b/, 'embed') %> alt=""
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
                     <div class="card-body">
-                        <h3 class="mb-1 text-truncate-line-2 "><a href="" class="text-inherit"><%= Workflow.find(favourite.workflow_id).title %></a>
+                        <h3 class="mb-1 text-truncate-line-2 "><a href="" class="text-inherit"><%= Workflow.find(upload.id).title %></a>
                       </h3>
                       <!-- List inline -->
                       <ul class="mb-3  list-inline">
@@ -187,7 +189,7 @@
                           <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span><%= User.find(Workflow.find(favourite.workflow_id).user_id).first_name %></span>
+                          <span><%= User.find(Workflow.find(upload.id).user_id).first_name %></span>
                         </div>
                         <div class="col-auto">
                           <a href="#" class="removeBookmark">
@@ -198,7 +200,8 @@
                     </div>
                   </div>
                 </div>
-
+                  <%else %>
+                  <% end %>
                 <% end %>
                 <div class="col-lg-3 col-md-6 col-12">
 
@@ -210,17 +213,12 @@
               </div>
             </div>
 
-              <div class="row">
-                <div class="offset-lg-3 col-lg-6 col-md-12 col-12 text-center mt-5">
-                  <p>You’ve reached the end of the list</p>
-                </div>
-              </div>
-            </div>
+
 
               </div>
               <div class="row">
                 <div class="offset-lg-3 col-lg-6 col-md-12 col-12 text-center mt-5">
-                  <p>You’ve reached the end of the list</p>
+
                 </div>
               </div>
             </div>
