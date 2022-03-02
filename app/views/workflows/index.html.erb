@@ -146,33 +146,14 @@
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
                     <div class="card-body">
-                      <h4 class="mb-2 text-truncate-line-2 "><a href="" class="text-inherit"><%= link_to workflow.title, workflow_path(workflow) %></a>
+                      <h4 class="mb-1 text-truncate-line-2 "><a href="" class="text-inherit"><%= link_to workflow.title, workflow_path(workflow) %></a>
                       </h4>
                        <!-- List inline -->
-                      <ul class="mb-3 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i>3h 56m
+                      <ul class="mb-0 list-inline">
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i><%= workflow.program %>
                         </li>
-                        <li class="list-inline-item"><svg class="me-1 mt-n1" width="16" height="16" viewBox="0 0 16 16"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE">
-                            </rect>
-                            <rect x="7" y="5" width="2" height="9" rx="1" fill="#DBD8E9">
-                            </rect>
-                            <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9">
-                            </rect>
-                          </svg>Beginner </li>
                       </ul>
-                      <div class="lh-1">
-                        <span>
-                          <i class="mdi mdi-star text-warning me-n1"></i>
-                          <i class="mdi mdi-star text-warning me-n1"></i>
-                          <i class="mdi mdi-star text-warning me-n1"></i>
-                          <i class="mdi mdi-star text-warning me-n1"></i>
-                          <i class="mdi mdi-star text-warning"></i>
-                        </span>
-                        <span class="text-warning">4.5</span>
-                        <span class="fs-6 text-muted">(7,700)</span>
-                      </div>
+
                     </div>
                     <!-- Card footer -->
                     <div class="card-footer">
@@ -182,7 +163,7 @@
                           <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span>Creator Name</span>
+                          <span><%= User.find(workflow.user_id).first_name %></span>
                         </div>
                         <div class="col-auto">
                          <a href="#" class="text-muted bookmark">

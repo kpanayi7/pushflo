@@ -73,13 +73,16 @@ ActiveRecord::Schema.define(version: 2022_03_01_194556) do
     t.text "description"
     t.text "walkthrough"
     t.text "program"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "loom_url"
+    t.index ["user_id"], name: "index_workflows_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "favourites", "users"
   add_foreign_key "favourites", "workflows"
+  add_foreign_key "workflows", "users"
 end
