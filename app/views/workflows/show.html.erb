@@ -39,6 +39,13 @@
                 </div>
                 <div>
                   <a href="#" class="btn btn-primary card-hover">✨ Favourite</a>
+                    <%= simple_form_for [@favourite] do |f| %>
+                      <%= f.hidden_field :workflow_id, value: @workflow.id %>
+                      <%= f.hidden_field :user_id, value: current_user.id %>
+                      <%= f.submit "Upload Workfow", class: "btn btn-primary" %>
+                    <% end %>
+
+
                 </div>
               </div>
             </div>
