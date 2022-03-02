@@ -33,7 +33,8 @@ end
     description: Faker::Lorem.sentence,
     walkthrough: Faker::Lorem.paragraphs,
     program: Faker::ProgrammingLanguage.name,
-    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d"
+    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
+    user_id: rand(1..10)
   )
   puts "created workflow"
 end

@@ -33,8 +33,8 @@
                 <div class="d-flex align-items-center">
                   <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-md" alt="" />
                   <div class="ms-2 lh-1">
-                    <h4 class="mb-1">Creator Name</h4>
-                    <p class="fs-6 mb-0">@creator</p>
+                    <h4 class="mb-1"> <%= User.find(@workflow.user_id).first_name %> </h4>
+                    <p class="fs-6 mb-0"><strong>@<%= User.find(@workflow.user_id).user_name %></strong></p>
                   </div>
                 </div>
                 <div>
