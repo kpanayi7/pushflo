@@ -35,7 +35,7 @@
 							</div>
 						</div>
 						<div>
-							<%= link_to "Favourites/Uploads", favourites_path(current_user), class:"btn btn-primary  card-hover " %>
+							<%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-primary  card-hover " %>
 						</div>
 					</div>
 				</div>
@@ -56,28 +56,7 @@
 						<!-- Collapse navbar -->
 						<div class="collapse navbar-collapse" id="sidenav">
 							<div class="navbar-nav flex-column">
-								<span class="navbar-header">Subscription</span>
-								<!-- List -->
-								<ul class="list-unstyled ms-n2 mb-4">
-									<!-- Nav item -->
-									<li class="nav-item">
-										<a class="nav-link" href="student-subscriptions.html"><i class="fe fe-calendar nav-icon"></i>My
-											Subscriptions</a>
-									</li>
-									<!-- Nav item -->
-									<li class="nav-item">
-										<a class="nav-link" href="billing-info.html"><i class="fe fe-credit-card nav-icon"></i>Billing
-											Info</a>
-									</li>
-									<!-- Nav item -->
-									<li class="nav-item">
-										<a class="nav-link" href="payment-method.html"><i class="fe fe-credit-card nav-icon"></i>Payment</a>
-									</li>
-									<!-- Nav item -->
-									<li class="nav-item">
-										<a class="nav-link" href="invoice.html"><i class="fe fe-clipboard nav-icon"></i>Invoice</a>
-									</li>
-								</ul>
+
 								<span class="navbar-header">Account Settings</span>
                 <!-- List -->
 								<ul class="list-unstyled ms-n2 mb-0">
@@ -151,7 +130,7 @@
 							<div>
 								<h4 class="mb-0">Personal Details</h4>
 								<p class="mb-4">
-									Edit your personal information and address.
+									Edit your personal information.
 								</p>
 								<!-- Form -->
 								<form class="row">
@@ -167,44 +146,8 @@
 									</div>
 									<!-- Phone -->
 									<div class="mb-3 col-12 col-md-6">
-										<label class="form-label" for="phone">Phone</label>
-										<input type="text" id="phone" class="form-control" placeholder="Phone" required />
-									</div>
-									<!-- Birthday -->
-									<div class="mb-3 col-12 col-md-6">
-										<label class="form-label" for="birth">Birthday</label>
-										<input class="form-control flatpickr" type="text" placeholder="Birth of Date" id="birth"
-											name="birth" />
-									</div>
-									<!-- Address -->
-									<div class="mb-3 col-12 col-md-6">
-										<label class="form-label" for="address">Address Line 1</label>
-										<input type="text" id="address" class="form-control" placeholder="Address" required />
-									</div>
-									<!-- Address -->
-									<div class="mb-3 col-12 col-md-6">
-										<label class="form-label" for="address2">Address Line 2</label>
-										<input type="text" id="address2" class="form-control" placeholder="Address" required />
-									</div>
-									<!-- State -->
-									<div class="mb-3 col-12 col-md-6">
-										<label class="form-label">State</label>
-										<select class="selectpicker" data-width="100%">
-											<option value="">Select State</option>
-											<option value="1">Gujarat</option>
-											<option value="2">Rajasthan</option>
-											<option value="3">Maharashtra</option>
-										</select>
-									</div>
-									<!-- Country -->
-									<div class="mb-3 col-12 col-md-6">
-										<label class="form-label">Country</label>
-										<select class="selectpicker" data-width="100%">
-											<option value="">Select Country</option>
-											<option value="1">India</option>
-											<option value="2">UK</option>
-											<option value="3">USA</option>
-										</select>
+										<label class="form-label" for="phone">User Name</label>
+										<input type="text" id="uname" class="form-control" placeholder="User Name" required />
 									</div>
 									<div class="col-12">
 										<!-- Button -->
