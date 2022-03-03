@@ -14,12 +14,14 @@ Rails.application.routes.draw do
   patch 'users/:id', to: 'users#update', as: 'edit_user'
   put 'users/:id', to: 'users#update'
 
-  resources :workflows, only: [:new, :create, :update, :edit]
-  resources :workflows, only: [:index, :show, :uploads]
+  resources :workflows, only: [:new, :create, :update, :edit,:index, :show, :uploads]
+
   get 'workflows', to: 'workflows#index_by_program', as: :program
   get 'workflows', to: 'workflows#uploads', as: :uploads
 
-  get 'users/:id/favourites', to: 'favourites#index', as: 'favourites'
+  resources :favourites, only: [:create]
+  get 'users/:id/favourites', to: 'favourites#index', as: 'favourited'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end
