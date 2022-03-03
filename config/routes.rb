@@ -20,7 +20,10 @@ Rails.application.routes.draw do
   get 'workflows', to: 'workflows#uploads', as: :uploads
 
   resources :favourites, only: [:create]
-  get 'users/:id/favourites', to: 'favourites#index', as: 'favourited'
+  get 'users/:id/favourites', to: 'favourites#index', as: 'favourited' do
+    resources :workflows
+  end
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
