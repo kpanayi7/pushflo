@@ -27,17 +27,60 @@ puts "created user"
   puts "created user"
 end
 
-10.times do
+
   Workflow.create!(
-    title: Faker::ProgrammingLanguage.name,
-    description: Faker::Lorem.sentence,
-    walkthrough: Faker::Lorem.paragraphs,
-    program: Faker::ProgrammingLanguage.name,
-    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
-    user_id: rand(1..10)
+    title: "Loom Shortcuts"
+    description: "Loom Video Shortcuts Pack"
+    walkthrough: "This pack will take you through some of the best shortcuts to speed up the creation of videos with Loom. From automating record on/off to turning on your lights and throwing in some confetti"
+    program: "Loom",
+    loom_url:"https://www.loom.com/share/6cceaf0c4d884f8a9a1b1995c1444efb",
+    user_id: 1
   )
   puts "created workflow"
-end
+
+  Workflow.create!(
+    title: "Automating Headings in Outlook"
+    description: "Bash out the next level headings on the fly"
+    walkthrough: "Getting your headings out for the lads - this will supercharge your headings in Outlook"
+    program: "Outlook",
+    loom_url:"https://www.loom.com/share/3faebe6e53fc47cc8a2822101d0bb7c8",
+    user_id: 1
+  )
+  puts "created workflow"
+
+
+Workflow.create!(
+    title: "Automating Excel Borders",
+    description: "Smashing out all the borders and that",
+    walkthrough: "This is how you bosh borders on the fly",
+    program: "Excel",
+    loom_url:"https://www.loom.com/share/eaf6d9b477bc4c478493bcf484f3a191",
+    user_id: 1
+)
+  puts "created workflow"
+
+Workflow.create!(
+    title: "Top Notion Shortcuts",
+    description: "Smashing out all the Notion shortcuts and that",
+    walkthrough: "This is how you bosh Notion shortcuts on the fly",
+    program: "Notion",
+    loom_url:"https://www.loom.com/share/afa9ffb550e24441867577d5fa033c52",
+    user_id: 1
+)
+  puts "created workflow"
+
+Workflow.create!(
+    title: "Top Gmail Textstrings",
+    description: "Smashing out all the Gmail textstings and that",
+    walkthrough: "This is how you bosh Gmail textstings on the fly",
+    program: "Gmail",
+    loom_url:"https://www.loom.com/share/fedc02d5b2214ee0b20c34aa5f3eace8",
+    user_id: 1
+)
+  puts "created workflow"
+
+
+
 
 10.times do
   Favourite.create!(
@@ -55,34 +98,3 @@ end
   )
   puts "created favourite"
 end
-
-
-Workflow.create!(
-    title: "Automating Excel Borders",
-    description: "Smashing out all the borders and that",
-    walkthrough: "This is how you bosh borders on the fly",
-    program: "Excel",
-    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
-    user_id: 1
-)
-  puts "created workflow"
-
-Workflow.create!(
-    title: "Top Notion Shortcuts",
-    description: "Smashing out all the Notion shortcuts and that",
-    walkthrough: "This is how you bosh Notion shortcuts on the fly",
-    program: "Notion",
-    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
-    user_id: 1
-)
-  puts "created workflow"
-
-Workflow.create!(
-    title: "Top Gmail Textstrings",
-    description: "Smashing out all the Gmail textstings and that",
-    walkthrough: "This is how you bosh Gmail textstings on the fly",
-    program: "Gmail",
-    loom_url:"https://www.loom.com/share/c71943387a5748999ad526bb5b7d139d",
-    user_id: 1
-)
-  puts "created workflow"
