@@ -29,9 +29,9 @@ end
 
 
   Workflow.create!(
-    title: "Loom Shortcuts"
-    description: "Loom Video Shortcuts Pack"
-    walkthrough: "This pack will take you through some of the best shortcuts to speed up the creation of videos with Loom. From automating record on/off to turning on your lights and throwing in some confetti"
+    title: "Loom Shortcuts",
+    description: "Loom Video Shortcuts Pack",
+    walkthrough: "This pack will take you through some of the best shortcuts to speed up the creation of videos with Loom. From automating record on/off to turning on your lights and throwing in some confetti",
     program: "Loom",
     loom_url:"https://www.loom.com/share/6cceaf0c4d884f8a9a1b1995c1444efb",
     user_id: 1
@@ -39,9 +39,9 @@ end
   puts "created workflow"
 
   Workflow.create!(
-    title: "Automating Headings in Outlook"
-    description: "Bash out the next level headings on the fly"
-    walkthrough: "Getting your headings out for the lads - this will supercharge your headings in Outlook"
+    title: "Headings in Outlook",
+    description: "Bash out the next level headings on the fly",
+    walkthrough: "Getting your headings out for the lads - this will supercharge your headings in Outlook",
     program: "Outlook",
     loom_url:"https://www.loom.com/share/3faebe6e53fc47cc8a2822101d0bb7c8",
     user_id: 1
@@ -50,7 +50,7 @@ end
 
 
 Workflow.create!(
-    title: "Automating Excel Borders",
+    title: "Excel Borders",
     description: "Smashing out all the borders and that",
     walkthrough: "This is how you bosh borders on the fly",
     program: "Excel",
@@ -85,16 +85,21 @@ Workflow.create!(
 10.times do
   Favourite.create!(
     user_id: rand(1..10),
-    workflow_id: rand(1..10)
+    workflow_id: rand(1..5)
   )
   puts "created favourite"
 end
 
 
-5.times do
+
   Favourite.create!(
     user_id: 1,
-    workflow_id: rand(1..10)
+    workflow_id:2
   )
   puts "created favourite"
-end
+
+   Favourite.create!(
+    user_id: 1,
+    workflow_id:3
+  )
+  puts "created favourite"
