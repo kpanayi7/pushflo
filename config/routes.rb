@@ -16,7 +16,8 @@ Rails.application.routes.draw do
 
   resources :workflows, only: [:new, :create, :update, :edit,:index, :show, :uploads]
 
-  get 'workflows', to: 'workflows#index_by_program', as: :program
+  get 'program', to: 'workflows#index_by_program', as: :program
+  get 'user_workflows', to: 'workflows#index_by_user', as: :user_workflows
   get 'workflows', to: 'workflows#uploads', as: :uploads
 
   resources :favourites, only: [:create]

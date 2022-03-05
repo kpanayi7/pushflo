@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<body>
 	<!-- Page Content -->
 	<div class="pt-5 pb-5">
 		<div class="container">
@@ -21,8 +18,7 @@
 									alt="" />
 							</div>
 							<div class="lh-1">
-								<h2 class="mb-0">
-									Dave Sellick
+								<h2 class="mb-0"><%=@current_user.first_name%> <%=@current_user.last_name%>
 									<a href="#" class="text-decoration-none" data-bs-toggle="tooltip" data-placement="top" title="Beginner">
 										<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
@@ -31,7 +27,7 @@
 										</svg>
 									</a>
 								</h2>
-								<p class="mb-0 d-block">dave</p>
+								    <p class=" mb-0 d-block"><%=@current_user.user_name%> </p>
 							</div>
 						</div>
 						<div>
@@ -165,6 +161,4 @@
 	</div>
 
 
-</body>
-
-</html>
+<div class="container pt-16"> </div>

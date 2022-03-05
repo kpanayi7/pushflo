@@ -6,7 +6,7 @@
 
 
        <!-- Page Content -->
-    <div class="py-lg-16 py-10 position-relative bg-cover"
+    <div class="py-lg-14 py-10 position-relative bg-cover"
      style="background: url(https://res.cloudinary.com/dza6mn30y/image/upload/v1646140293/Pushflo/Images/Home_Page_Hero_j2bd8j.png)no-repeat , linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), rgba(221, 218, 255, 0.3) ; background-size: cover; background-position: top center"
       style="background-image:
       url(https://res.cloudinary.com/dza6mn30y/image/upload/v1645886037/Pushflo/Images/gradient-bg_atci5d.png);"
@@ -15,7 +15,7 @@
       <div class="container">
         <div class="row align-items-center mb-6">
           <div class="col-12 col-xl-6 order-md-2">
-            <div class="mb-2 mb-md-0">
+            <div class="mb-1 mb-md-0">
               <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645876695/Pushflo/Images/Streamdeck_image_oyrsms.png" alt=""
               class="img-fluid mw-md-100">
             </div>
@@ -52,28 +52,34 @@
 <!-- =======================
 Category START -->
 <section class="bg-white">
-	<div class="container pt-lg-8 pb-lg-4 bg-white">
+	<div class="container pt-lg-0 pb-lg-4 bg-white">
         <h1 class="display-4 fw-bold pb-lg-4">💫 Show Workflows by Popular Programs</h1>
 		<div class="row g-4">
 
 			<!-- Category item -->
+
 			<div class="col-sm-6 col-lg-4 col-xl-3">
-				<div class="card card-body  card-hover bg-light">
-					<div class="d-flex align-items-center">
+      <%= link_to program_path(filter: "Notion"),  style: "text-decoration: none;" do %>
+
+				<div class="card card-body  card-hover bg-light ">
+
+					    <div class="d-flex align-items-center">
 						<!-- Icon -->
 
-            <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645988609/Pushflo/Images/icons/Notion_umximk.png" class="rounded avatar-lg" alt="">
-						<div class="ms-3">
+                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645988609/Pushflo/Images/icons/Notion_umximk.png" class="rounded avatar-lg" alt="">
+				      <div class="ms-3">
 
-							<h3 class="fw-bold">Notion</h3>
+					    <h3 class="fw-bold", style= "text-decoration: none;">Notion</h3>
 							<span>10 Workflows</span>
-						</div>
 					</div>
-				</div>
-			</div>
+					  </div>
+			  	</div>
+           <%end%>
+			  </div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+      <%= link_to program_path(filter: "Excel"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -86,10 +92,12 @@ Category START -->
 						</div>
 					</div>
 				</div>
+         <%end%>
 			</div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+        <%= link_to program_path(filter: "Gmail"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -102,10 +110,12 @@ Category START -->
 						</div>
 					</div>
 				</div>
+         <%end%>
 			</div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+      <%= link_to program_path(filter: "Slack"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -118,10 +128,12 @@ Category START -->
 						</div>
 					</div>
 				</div>
+          <%end%>
 			</div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+        <%= link_to program_path(filter: "Loom"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -134,10 +146,12 @@ Category START -->
 						</div>
 					</div>
 				</div>
+         <%end%>
 			</div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+       <%= link_to program_path(filter: "VS Code"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -150,10 +164,12 @@ Category START -->
 						</div>
 					</div>
 				</div>
+          <%end%>
 			</div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+         <%= link_to program_path(filter: "G Sheets"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -166,10 +182,12 @@ Category START -->
 						</div>
 					</div>
 				</div>
+          <%end%>
 			</div>
 
 			<!-- Category item -->
 			<div class="col-sm-6 col-lg-4 col-xl-3">
+      <%= link_to program_path(filter: "Outlook"),  style: "text-decoration: none;" do %>
 				<div class="card card-body  card-hover bg-light">
 					<div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -182,6 +200,7 @@ Category START -->
 						</div>
 					</div>
 				</div>
+          <%end%>
 			</div>
 		</div>
 	</div>
@@ -211,66 +230,61 @@ Category END -->
 
 
       <!-- Content -->
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-12">
-          <div class="mb-5">
-            <h1 class="display-4 fw-bold">📌 Featured Workflows</h1>
-            <p class="mb-0"></p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-12">
-          <!-- Card -->
-          <div class="card  mb-4 card-hover">
-                    <iframe href="course-single.html" class="card-img-top" src="https://www.loom.com/embed/cd40bc0d574b4edf90e7194990282dd5" alt=""
-                        class="card-img-top rounded-top-md"></iframe>
-            <!-- Card body -->
-            <div class="card-body">
-              <h3 class="h4 mb-2 text-truncate-line-2 "><a href="#" class="text-inherit">How to easily
-                  create a website with React</a></h3>
-              <ul class="mb-3  list-inline">
-                <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i>3h 56m</li>
-                <li class="list-inline-item"><svg class="me-1 mt-n1" width="16" height="16" viewBox="0 0 16 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                    <rect x="7" y="5" width="2" height="9" rx="1" fill="#DBD8E9"></rect>
-                    <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
-                  </svg>Beginner </li>
-              </ul>
-              <div class="lh-1">
-                <span>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning"></i>
-                </span>
-                <span class="text-warning">4.5</span>
-                <span class="fs-6 text-muted">(6,300)</span>
+      <div class= "container pb-8
+          pt-6">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <div class="mb-5">
+                <h1 class="display-4 fw-bold pb-2">📌 Featured Workflows</h1>
+                <p class="mb-0"></p>
               </div>
             </div>
-            <!-- Card footer -->
-            <div class="card-footer">
-              <div class="row align-items-center g-0">
-                <div class="col-auto">
-                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Nelson_rr2idp.jpg" class="rounded-circle avatar-xs" alt="">
-                </div>
-                <div class="col ms-2">
-                  <span>Morris Mccoy</span>
-                </div>
-                <div class="col-auto">
-                 <a href="#" class="text-muted bookmark">
+            </div>
+            <div class="row">
+              <%  Workflow.all.sample(4).each do |workflow|%>
+                <div class="col-lg-3 col-md-6 col-12">
+                  <!-- Card -->
+
+
+                  <div class="card  mb-4 card-hover">
+                  <iframe  class="card-img-top" src= <%= workflow.loom_url.gsub(/\bshare\b/, 'embed') %> alt=""
+                        class="card-img-top rounded-top-md"></iframe>
+                    <!-- Card body -->
+                    <div class="card-body">
+                      <h4 class="mb-1 text-truncate-line-2 "><a href="" class="text-inherit"><%= link_to workflow.title, workflow_path(workflow) %></a>
+                      </h4>
+                       <!-- List inline -->
+                      <ul class="mb-0 list-inline">
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i><%= workflow.program %>
+                        </li>
+                      </ul>
+
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer">
+                       <!-- Row -->
+                      <div class="row align-items-center g-0">
+                        <div class="col-auto">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
+                        </div>
+                        <div class="col ms-2">
+                          <span><%= User.find(workflow.user_id).first_name %></span>
+                        </div>
+                        <div class="col-auto">
+                         <a href="#" class="text-muted bookmark">
                     <i class="fe fe-bookmark  "></i>
                   </a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-12">
-          <!-- Card -->
-          <div class="card  mb-4 card-hover">
+            <%end%>
+
+            <%# <div class="col-lg-3 col-md-6 col-12">
+            <!-- Card -->
+            <div class="card  mb-4 card-hover">
                     <iframe href="course-single.html" class="card-img-top" src="https://www.loom.com/embed/cd40bc0d574b4edf90e7194990282dd5" alt=""
                         class="card-img-top rounded-top-md"></iframe>
             <!-- Card body -->
@@ -314,11 +328,11 @@ Category END -->
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-12">
-          <!-- Card -->
-          <div class="card  mb-4 card-hover">
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <!-- Card -->
+              <div class="card  mb-4 card-hover">
                     <iframe href="course-single.html" class="card-img-top" src="https://www.loom.com/embed/cd40bc0d574b4edf90e7194990282dd5" alt=""
                         class="card-img-top rounded-top-md"></iframe>
             <!-- Card body -->
@@ -414,9 +428,10 @@ Category END -->
           </div>
         </div>
       </div>
+      </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 col-12">
-
+        %>
 
 
               </div>
@@ -435,17 +450,26 @@ Category END -->
   <hr class="my-0">
   <div class="py-8 pb-lg-0 pt-lg-8 bg-light-gradient-top ">
     <div class="container">
-      <div class="row mb-8 justify-content-center">
+      <div class="row mb-4 justify-content-center">
          <!-- caption -->
         <div class="col-lg-8 col-md-12 col-12 text-center">
           <span class="text-primary mb-3 d-block text-uppercase fw-semi-bold ls-xl">learn from a growing community</span>
           <h2 class="display-4 fw-bold">🌍 Workflows created by a Global Community</h2>
           <p class="lead">Experts, experienced users and novices - the platform enables the creation and sharing of workflows from a diverse global community</p>
         </div>
+
+
+        <div class="col-lg-12 col-md-12 col-12">
+          <div class="mb-1">
+            <h1 class="display-6 fw-bold pt-8">👇 Here are a few of our awesome creators</h1>
+            <p class="mb-1"></p>
+          </div>
+        </div>
+
       </div>
  <!-- row -->
       <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12 ">
            <!-- card -->
           <div class="card mb-4 card-hover">
              <!-- img -->
@@ -455,18 +479,11 @@ Category END -->
              <!-- card body -->
             <div class="card-body">
              <h3 class="mb-0 fw-semi-bold"> <a href="#" class="text-inherit">Nelson</a></h3>
-              <p class="mb-3">Professional Web Developer</p>
+                   <p class="mb-3">Specialisms : <strong>Gmail, Adobe</strong></p>
               <div class="lh-1  d-flex justify-content-between">
+
                 <div>
-                  <span class="fs-6">
-                    <i class="mdi mdi-star text-warning"></i>
-                    <span class="text-warning">4.5</span>
-                  </span>
-                </div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">9,692</span> Students</span></div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">3</span> Course</span></div>
+                  <span class="fs-6 text-muted"><span class="text-dark">20</span> Workflows</span></div>
               </div>
             </div>
           </div>
@@ -481,18 +498,11 @@ Category END -->
              <!-- card body -->
             <div class="card-body">
               <h3 class="mb-0 fw-semi-bold"><a href="#" class="text-inherit">Dave</a></h3>
-              <p class="mb-3">Developer of Bootcamp</p>
+                 <p class="mb-3">Specialisms : <strong> Excel, Outlook </strong></p>
               <div class="lh-1  d-flex justify-content-between">
+
                 <div>
-                  <span class="fs-6">
-                    <i class="mdi mdi-star text-warning"></i>
-                    <span class="text-warning">4.5</span>
-                  </span>
-                </div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">5,128</span> Students</span></div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">5</span> Course</span></div>
+                  <span class="fs-6 text-muted"><span class="text-dark">25</span> Workflows</span></div>
               </div>
             </div>
           </div>
@@ -507,18 +517,11 @@ Category END -->
              <!-- card body -->
             <div class="card-body">
               <h3 class="mb-0 fw-semi-bold"><a href="#" class="text-inherit">Kyri</a></h3>
-              <p class="mb-3">Engineering Architect</p>
+              <p class="mb-3">Specialisms : <strong>Sage, Excel</strong></p>
               <div class="lh-1  d-flex justify-content-between">
+
                 <div>
-                  <span class="fs-6">
-                    <i class="mdi mdi-star text-warning"></i>
-                    <span class="text-warning">4.5</span>
-                  </span>
-                </div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">7,423</span> Students</span></div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">8</span> Course</span></div>
+                  <span class="fs-6 text-muted"><span class="text-dark">10</span> Workflows</span></div>
               </div>
             </div>
           </div>
@@ -533,26 +536,20 @@ Category END -->
              <!-- card body -->
             <div class="card-body">
               <h3 class="mb-0 fw-semi-bold"><a href="#" class="text-inherit">Rahul</a></h3>
-              <p class="mb-3">Web Developer and Designer</p>
+              <p class="mb-3">Specialisms : <strong>VS Code, Git Hub</strong></p>
               <div class="lh-1  d-flex justify-content-between">
+
                 <div>
-                  <span class="fs-6">
-                    <i class="mdi mdi-star text-warning"></i>
-                    <span class="text-warning">4.5</span>
-                  </span>
-                </div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">3,896</span> Students</span></div>
-                <div>
-                  <span class="fs-6 text-muted"><span class="text-dark">5</span> Course</span></div>
-              </div>
+                  <span class="fs-6 text-muted"><span class="text-dark">5</span> Workflows</span></div>
+
             </div>
           </div>
         </div>
-         <!-- btn -->
-        <div class="col-md-12 mt-3 text-center">
-          <a href="#" class="btn btn-primary card-hover"> See All Creators </a>
         </div>
+         <!-- btn -->
+        <%# <div class="d-flex justify-content-center pt-6">
+          <a href="#" class="btn btn-primary card-hover"> See All Creators </a>
+        </div> %>
       </div>
     </div>
   </div>
@@ -560,7 +557,7 @@ Category END -->
   <div class="py-8 py-lg-16 ">
     <div class="container ">
 
-      <div class="row mb-4 justify-content-center">
+      <div class="row ">
         <div class="col-lg-11 col-md-12">
           <div class="row align-items-center">
             <div class="col-md-12 col-12 mb-4">
@@ -612,11 +609,12 @@ Category END -->
               <h3 class="fw-semi-bold mb-2">Join our community</h3>
               <p class="fs-4">Take advantage of our active community of creators
               </p>
-            </div>
+          </div>
               <!-- btn -->
-            <div class="col-md-12 mt-3">
-              <a href="#" class="btn btn-primary card-hover">Upload a workflow</a>
-              <br><br>
+            <div class="mb-lg-10">
+              <a href="#" >
+                <%= link_to "⤴️ Upload Workflow", new_workflow_path, class:"btn btn-primary  card-hover " %>
+              </a>
 
             </div>
           </div>
@@ -626,9 +624,3 @@ Category END -->
     </div>
 
 </div>
-
-
-
-<%# </body>
-
-</html> %>
