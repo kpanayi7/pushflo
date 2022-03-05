@@ -1,8 +1,10 @@
 class FavouritesController < ApplicationController
     before_action :find_favourite, only: %i[show]
+    before_action :find_workflow, only: %i[new create]
 
   def index
     @favourites = Favourite.where(user: current_user)
+
   end
 
   def show
@@ -10,7 +12,6 @@ class FavouritesController < ApplicationController
   end
 
   def new
-    @workflow = Workflow.find(params[:workflow_id])
     @favourite = Favourite.new
 
   end
@@ -20,8 +21,11 @@ class FavouritesController < ApplicationController
 
     # @favourite.workflow = Workflow.find(params[:workflow_id])
     # @favourite.user = current_user
+
     if @favourite.save
-      redirect_to favourited_path(current_user), notice: "Favourite Saved"
+      @favourite.save!
+      flash[:alert] = "Added to Favourites 👍"
+      redirect_to workflow_path(@workflow)
     else
          render :new
     end
@@ -31,6 +35,10 @@ class FavouritesController < ApplicationController
 
   def find_favourite
     @favourite = Favourite.find(params[:id])
+  end
+
+  def find_workflow
+    @workflow = Workflow.find(params["favourite"][:workflow_id])
   end
 
   def favourite_params

@@ -70,7 +70,7 @@
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
                     <div class="card-body">
-                        <h3 class="mb-1 text-truncate-line-2 "><a href="" class="text-inherit"><%= Workflow.find(favourite.workflow_id).title %></a>
+                        <h3 class="mb-1 text-truncate-line-2 "> <%= link_to Workflow.find(favourite.workflow_id).title, workflow_path(favourite.workflow_id), class:"text-inherit"%>
 
                       </h3>
                       <!-- List inline -->
