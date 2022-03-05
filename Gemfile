@@ -36,6 +36,7 @@ gem 'simple_form'
 gem 'cloudinary', '~> 1.16.0'
 gem 'rails_admin', '~> 2.0'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'acts_as_favoritor'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
