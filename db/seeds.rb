@@ -44,7 +44,7 @@ end
     walkthrough: "Getting your headings out for the lads - this will supercharge your headings in Outlook",
     program: "Outlook",
     loom_url:"https://www.loom.com/share/3faebe6e53fc47cc8a2822101d0bb7c8",
-    user: pushflo
+    user: pushflo,
   )
   puts "created workflow"
 
@@ -59,6 +59,30 @@ Workflow.create!(
 )
   puts "created workflow"
 
+
+
+Workflow.create!(
+    title: "Excel Borders",
+    description: "Smashing out all the borders and that",
+    walkthrough: "This is how you bosh borders on the fly",
+    program: "Excel",
+    loom_url:"https://www.loom.com/share/eaf6d9b477bc4c478493bcf484f3a191",
+    user: pushflo
+)
+  puts "created workflow"
+
+  Workflow.create!(
+    title: "Excel Borders",
+    description: "Smashing out all the borders and that",
+    walkthrough: "This is how you bosh borders on the fly",
+    program: "Excel",
+    loom_url:"https://www.loom.com/share/eaf6d9b477bc4c478493bcf484f3a191",
+    user: pushflo
+)
+  puts "created workflow"
+
+
+
 Workflow.create!(
     title: "Top Notion Shortcuts",
     description: "Smashing out all the Notion shortcuts and that",
@@ -68,6 +92,30 @@ Workflow.create!(
     user: pushflo
 )
   puts "created workflow"
+
+
+
+  Workflow.create!(
+    title: "Top Notion Shortcuts",
+    description: "Smashing out all the Notion shortcuts and that",
+    walkthrough: "This is how you bosh Notion shortcuts on the fly",
+    program: "Notion",
+    loom_url:"https://www.loom.com/share/afa9ffb550e24441867577d5fa033c52",
+    user: pushflo
+)
+  puts "created workflow"
+
+
+  Workflow.create!(
+    title: "Top Notion Shortcuts",
+    description: "Smashing out all the Notion shortcuts and that",
+    walkthrough: "This is how you bosh Notion shortcuts on the fly",
+    program: "Notion",
+    loom_url:"https://www.loom.com/share/afa9ffb550e24441867577d5fa033c52",
+    user: pushflo
+)
+  puts "created workflow"
+
 
 Workflow.create!(
     title: "Top Gmail Textstrings",

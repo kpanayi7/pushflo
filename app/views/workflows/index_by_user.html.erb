@@ -10,7 +10,7 @@
       <div class="row align-items-center">
         <div class="col-xl-12 col-lg-12 col-md-12 col-12">
           <div>
-            <h1 class="text-black display-4">Workflows Listing</h1>
+            <h1 class="text-black display-4"> Workflows uploaded by <%= User.find_by(user_name: params[:filter]).first_name + " " + User.find_by(user_name: params[:filter]).last_name %></h1>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@
                       </h4>
                        <!-- List inline -->
                       <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= workflow.program %>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i><%= workflow.program %>
                         </li>
                       </ul>
 
