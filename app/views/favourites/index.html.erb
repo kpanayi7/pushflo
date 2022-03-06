@@ -65,7 +65,8 @@
 
                       </h4>
                         <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= Workflow.find(favourite.workflow_id).program %>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= link_to Workflow.find(favourite.workflow_id).program, program_path(filter: Workflow.find(favourite.workflow_id).program), class:"text-secondary" %>
+
                         </li>
                       </ul>
                       <!-- List inline -->
@@ -78,7 +79,8 @@
                           <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span><%= User.find(Workflow.find(favourite.workflow_id).user_id).first_name %></span>
+                          <span> <%= link_to User.find(Workflow.find(favourite.workflow_id).user_id).first_name + " " + User.find(Workflow.find(favourite.workflow_id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(favourite.workflow_id).user_id).user_name ) , class:"text-secondary"  %></span>
+
                         </div>
                         <div class="col-auto">
                           <a href="#" class="removeBookmark">
@@ -129,7 +131,8 @@
                          <h4 class="mb-1 text-truncate-line-2 text-inherit "> <%= link_to Workflow.find(upload.id).title, workflow_path(upload.id)%>
                          </h4>
                         <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= Workflow.find(upload.id).program %>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= link_to Workflow.find(upload.id).program, program_path(filter: Workflow.find(upload.id).program), class:"text-secondary"  %>
+
                         </li>
                       </ul>
 
@@ -142,7 +145,8 @@
                           <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span><%= User.find(Workflow.find(upload.id).user_id).first_name %></span>
+                          <span><%= link_to User.find(Workflow.find(upload.id).user_id).first_name + " " + User.find(Workflow.find(upload.id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(upload.id).user_id).user_name ) , class:"text-secondary" %></span>
+
                         </div>
                         <div class="col-auto">
                           <a href="#" class="removeBookmark">

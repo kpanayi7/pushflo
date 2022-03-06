@@ -16,19 +16,28 @@
           <!-- Card -->
           <div class="card mb-5">
             <!-- Card body -->
-            <div class="card-body">
+            <div class="card-body pt-3">
               <div class="d-flex justify-content-between align-items-center">
-                <h1 class="fw-semi-bold mb-1">
+                <h1 class="fw-semi-bold mb-0">
                   <%= @workflow.title %>
                 </h1>
-                <a href="#" data-bs-toggle="tooltip" data-placement="top"  title="Add to Bookmarks">
+                  <div>
+
+                      </div>
+                  <a href="#" data-bs-toggle="tooltip" data-placement="top"  title="Add to Bookmarks">
                   <i class="fe fe-bookmark fs-3 text-inherit"></i>
-                </a>
+                  </a>
+
+                 <ul class="mb-0 list-inline">
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i> <b> 🔗  <%=  link_to @workflow.program + " Workflows", program_path(filter: @workflow.program)   %></b>
+                        </li>
+                      </ul>
               </div>
-              <div class="d-flex mb-5">
+
+                        <div class="d-flex mb-2">
 
 
-              </div>
+                </div>
               <div class="d-flex justify-content-between">
                 <div class="d-flex align-items-center">
                   <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-md" alt="" />
