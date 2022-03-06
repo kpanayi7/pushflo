@@ -36,11 +36,12 @@ require("packs/sidebarMenu")
 require("packs/tnsSlider")
 require("packs/tooltip")
 import "./theme.min"
-
+import {loomUpload} from "../packs/loom.js"
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
+  if (document.querySelector("#loomupload")) {
+    loomUpload()
+  }
 });
 
 //  if ($(".headingTyped").length) {
