@@ -150,7 +150,7 @@
                       </h4>
                        <!-- List inline -->
                       <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= workflow.program %>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%=  link_to workflow.program, program_path(filter: workflow.program), class:"text-secondary"  %>
                         </li>
                       </ul>
 
@@ -163,7 +163,7 @@
                           <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span><%= User.find(workflow.user_id).first_name %></span>
+                          <span class=" text-secondary"> <%=  link_to User.find(workflow.user_id).first_name + " " + User.find(workflow.user_id).last_name, user_workflows_path(filter:User.find(workflow.user_id).user_name), class:"text-secondary", style: "" %> </span>
                         </div>
                         <div class="col-auto">
                          <a href="#" class="text-muted bookmark">
