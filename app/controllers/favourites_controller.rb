@@ -24,10 +24,10 @@ class FavouritesController < ApplicationController
 
     if @favourite.save
       @favourite.save!
-      flash[:alert] = "Added to Favourites 👍"
+      flash[:notice] = "Added to Favourites 👍"
       redirect_to workflow_path(@workflow)
     else
-         render :new
+      render :new
     end
   end
 
@@ -42,7 +42,7 @@ class FavouritesController < ApplicationController
   end
 
   def favourite_params
-    params.require(:favourite).permit(:workflow_id,:user_id)
+    params.require(:favourite).permit(:workflow_id, :user_id)
   end
 
 end

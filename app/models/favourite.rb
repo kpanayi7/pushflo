@@ -1,4 +1,4 @@
-class Favourite < ApplicationRecord
-  belongs_to :user
-  belongs_to :workflow
-end
+# class Favourite < ApplicationRecord
+#   belongs_to :user
+#   belongs_to :workflow
+# end
