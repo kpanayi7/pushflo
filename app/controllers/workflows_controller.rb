@@ -7,21 +7,21 @@ class WorkflowsController < ApplicationController
   end
 
   def index_by_program
-   if params[:filter]
-    @workflows = Workflow.where(:program => params[:filter])
-  else
-    @workflows = Workflow.all
-  end
+    if params[:filter]
+      @workflows = Workflow.where(:program => params[:filter])
+    else
+      @workflows = Workflow.all
+    end
   end
 
-   def index_by_user
-   if params[:filter]
-    @user = User.where(user_name: params[:filter])
-    @user_id =
-    @workflows = Workflow.where(:user_id => @user)
-  else
-    @workflows = Workflow.all
-  end
+  def index_by_user
+    if params[:filter]
+      @user = User.where(user_name: params[:filter])
+      @user_id =
+      @workflows = Workflow.where(:user_id => @user)
+    else
+     @workflows = Workflow.all
+    end
   end
 
 
