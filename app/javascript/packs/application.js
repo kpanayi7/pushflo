@@ -24,26 +24,32 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
-require("packs/beStepper")
+// require("packs/beStepper")
 require("packs/calendar")
 require("packs/chart")
 require("packs/chat")
-require("packs/customDragula")
+// require("packs/customDragula")
 require("packs/jquery.downCount.min")
-require("packs/main")
+// require("packs/main")
 require("packs/pricing")
 require("packs/sidebarMenu")
 require("packs/tnsSlider")
-require("packs/tooltip")
-require ("packs/loom.js")
-import "./theme.min"
+// const theme = require("packs/theme.min")
+// require("packs/tooltip")
+// require("packs/loom.js")
+import {loomUpload} from "packs/loom"
+import {main} from "packs/main"
 
 
-// document.addEventListener('turbolinks:load', () => {
-//   if (document.querySelector("#loomupload")) {
-//     loomUpload()
-//   }
-// });
+document.addEventListener('turbolinks:load', () => {
+  const typedTitle = document.getElementById("title-typed")
+  if (typedTitle) {
+    main()
+  }
+  if (document.querySelector("#loomrecord")) {
+    loomUpload()
+  }
+});
 
 //$('#loom-record-sdk-button').addEventListener('click', function () {
 
