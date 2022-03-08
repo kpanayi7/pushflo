@@ -35,21 +35,18 @@ require("packs/pricing")
 require("packs/sidebarMenu")
 require("packs/tnsSlider")
 require("packs/tooltip")
+require ("packs/loom.js")
 import "./theme.min"
-import {loomUpload} from "../packs/loom.js"
 
-document.addEventListener('turbolinks:load', () => {
-  if (document.querySelector("#loomupload")) {
-    loomUpload()
-  }
-});
 
-//  if ($(".headingTyped").length) {
-//     var typed = new Typed('.headingTyped', {
-//       strings: ["First", "Second"],
-//       typeSpeed: 40,
-//       backSpeed: 40,
-//       backDelay: 1000,
-//       loop: true
-//     });
+// document.addEventListener('turbolinks:load', () => {
+//   if (document.querySelector("#loomupload")) {
+//     loomUpload()
 //   }
+// });
+
+//$('#loom-record-sdk-button').addEventListener('click', function () {
+
+  //  loomUpload();
+
+//});
