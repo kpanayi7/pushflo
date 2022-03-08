@@ -5,7 +5,7 @@
 
 'use strict';
 
-(function () {
+export function main() {
 
 
     // slimscroll for course resume page
@@ -411,4 +411,4 @@ if (alertTrigger) {
 }
 }
 
-})();
+};
