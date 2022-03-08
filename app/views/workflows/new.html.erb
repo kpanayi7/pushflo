@@ -11,7 +11,6 @@
               </p>
             </div>
             <div>
-              <button class="btn btn-primary  card-hover" id="app">Record</button>
               <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
               <%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-dark card-hover " %>
             </div>
@@ -33,5 +32,6 @@
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.submit "🚀 Submit Workflow", class: "btn btn-primary" %>
   <% end %>
-
+  <br>
+<button class="btn btn-primary  card-hover" id="app">Record Loom</button>
 <div class="container pt-20"> </div>
