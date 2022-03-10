@@ -1,3 +1,6 @@
+
+//= require actiontext
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -13,4 +16,12 @@
 @import "pages/index";
 @import "pages/home";
 // Main Theme Import
-@import "theme.scss"
+@import "theme.scss";
+
+@import "trix.scss";
+@import "actiontext.scss";
+
+//simple_form input for rich_text_area hight
+trix-editor.form-control {
+  height: auto;
+}
