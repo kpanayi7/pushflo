@@ -5,19 +5,22 @@
           <div class="d-lg-flex align-items-center justify-content-between">
             <!-- Content -->
             <div class="mb-4 mb-lg-0">
-              <h1 class="display-4 fw-bold pb-lg-4">⤴️ Upload a New Workflow</h1>
+              <h1 class="display-4 fw-bold pb-lg-2">⤴️ Upload a New Workflow</h1>
               <p class="mb-0 text-black lead">
 
               </p>
             </div>
-            <div>
-              <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
-              <%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-dark card-hover " %>
-            </div>
+                <div>
+                  <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
+                  <%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-dark card-hover " %>
+                </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="container px-14 py-2 pb-4  ">
+  <div id="loomrecord" class=""><button class="button-4 text center align-middle"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_32/v1646954811/Pushflo/Images/icons/Loom_bm_wr6oyl.png">  Record a Loom</button></div>
   </div>
   <!-- Page Content -->
   <div class="pb-10">
@@ -31,8 +34,8 @@
     <%= f.rich_text_area :content %>
     <%= f.input :loom_url %>
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit "🚀 Submit Workflow", class: "crazybutton" %>
-  <% end %>
-  <br>
-<div id="loomrecord"><button class="btn btn-primary card-hover">Record</button></div>
+    <%= f.submit "🚀 Submit Workflow", class: "btn btn-primary card-hover" %>
+    <% end %>
+</div>
+
 <div class="container pt-20"> </div>

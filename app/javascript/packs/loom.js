@@ -28,7 +28,7 @@ export function loomUpload() {
       return;
     }
 
-    root.innerHTML = `<button class="btn btn-primary card-hover" id="${BUTTON_ID}">Record</button>`;
+    root.innerHTML = `<button class="button-4" id="${BUTTON_ID}"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_32/v1646954811/Pushflo/Images/icons/Loom_bm_wr6oyl.png">  Record a Loom</button>`;
 
     const button = document.getElementById(BUTTON_ID);
 
