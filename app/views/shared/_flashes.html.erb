@@ -1,9 +1,12 @@
 <% if notice %>
-  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
+  <div class="alert alert-info alert-dismissible fade show ms-5 mt-5 ps-4 pt-5" role="alert">
     <%= notice %>
-    <button type="button" class="close col-lg-6 col-md-8 py-8 py-xl-0 " data-dismiss="alert" aria-label="Close">
+    <%# <button type="button" class="close col-lg-6 col-md-8 mt-5 py-xl-0 " data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
-    </button>
+    </button> %>
+    <a data-bs-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
   </div>
 <% end %>
 <% if alert %>
