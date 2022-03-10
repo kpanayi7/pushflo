@@ -56,3 +56,6 @@ document.addEventListener('turbolinks:load', () => {
   //  loomUpload();
 
 //});
+
+require("trix")
+require("@rails/actiontext")

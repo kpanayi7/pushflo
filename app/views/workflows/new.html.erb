@@ -27,10 +27,11 @@
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :program %>
-    <%= f.input :walkthrough %>
+    <%= f.label :content %>
+    <%= f.rich_text_area :content %>
     <%= f.input :loom_url %>
     <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit "🚀 Submit Workflow", class: "btn btn-primary" %>
+    <%= f.submit "🚀 Submit Workflow", class: "crazybutton" %>
   <% end %>
   <br>
 <div id="loomrecord"><button class="btn btn-primary card-hover">Record</button></div>
