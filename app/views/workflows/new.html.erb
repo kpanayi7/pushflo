@@ -5,7 +5,7 @@
           <div class="d-lg-flex align-items-center justify-content-between">
             <!-- Content -->
             <div class="mb-4 mb-lg-0">
-              <h1 class="display-4 fw-bold pb-lg-2">⤴️ Upload a New Workflow</h1>
+              <h2 class="display-4 fw-bold pb-lg-2">⤴️ Upload a New Workflow</h2>
               <p class="mb-0 text-black lead">
 
               </p>
@@ -27,12 +27,15 @@
     <div class="container">
       <div id="courseForm" class="form-inputs text-dark-primary text-body-bold  px-12">
     <%= simple_form_for [@workflow] do |f| %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :program %>
-    <%= f.label :content %>
-    <%= f.rich_text_area :content %>
-    <%= f.input :loom_url %>
+    <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
+     <%= f.label :description, :required => false, :label => "❓(OPTIONAL) Description" , as: :text, input_html: {rows: 1},:class => 'form_label' %>  <span class="form_h2"> - 1 sentence headline</span>
+     <%= f.input :description, label: false , :input_html => {:rows => 1} %>
+     <%= f.label :content, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
+    <%= f.input :program, label: false, :input_html => {:rows => 1}  %>
+    <%= f.label :content, :required => false, :label => "📝 (OPTIONAL) Written Walkthough & ⤴️ Profile Upload", :class => 'form_label'  %> <span class="form_h2"> - use the link icon 🔗 to attach a Streamdeck Profile</span>
+    <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
+    <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (paste below 👇)</span>
+    <%= f.input :loom_url, label: false  %>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-4" %>
     <% end %>

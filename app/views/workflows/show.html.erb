@@ -72,8 +72,10 @@
                   aria-labelledby="description-tab">
                   <div class="mb-4">
                     <h3 class="mb-2">Walkthrough Notes</h3>
+
                     <p>
-                      <%= @workflow.walkthrough %>
+
+                      <%= @workflow.content.to_s.gsub(/\A<div class="trix-content">(.*)<\/div class="trix-content-show">\z/m, '\1').strip.html_safe %>
                     </p>
 
 
