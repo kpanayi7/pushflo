@@ -36,6 +36,9 @@
     <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
     <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (paste below 👇)</span>
     <%= f.input :loom_url, label: false  %>
+    <%= f.input :SDprofile, as: :file %>
+
+
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-4" %>
     <% end %>

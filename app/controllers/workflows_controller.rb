@@ -54,7 +54,7 @@ class WorkflowsController < ApplicationController
   private
 
   def workflow_params
-    params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url)
+    params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile)
   end
 
   def find_workflow
