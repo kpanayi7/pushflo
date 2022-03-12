@@ -71,14 +71,14 @@
                 <div class="tab-pane fade show active" id="description" role="tabpanel"
                   aria-labelledby="description-tab">
                   <div class="mb-4">
-                    <h3 class="mb-2">Walkthrough Notes</h3>
+                    <h3 class="mb-2 pl-3 fw-semi-bold">📝 Walkthrough Notes</h3>
 
                     <p>
-
-                      <%= @workflow.content.to_s.gsub(/\A<div class="trix-content">(.*)<\/div class="trix-content-show">\z/m, '\1').strip.html_safe %>
+                      <%= @workflow.content %>
                     </p>
 
 
+              <a href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647104273/development/<%=@workflow.SDprofile.key%>.streamDeckProfile"> 🔗Profile Download </a>
 
           </div>
         </div>
