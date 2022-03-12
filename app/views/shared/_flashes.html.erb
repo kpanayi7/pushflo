@@ -1,16 +1,21 @@
 <% if notice %>
-  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
-    <%= notice %>
-    <button type="button" class="close col-lg-6 col-md-8 py-8 py-xl-0 " data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+<div class="container-fluid">
+  <div>
+    <div class="flash flash-success alert center-block alert-dismissible fade show" role="alert">
+      <p class="flash-notice"><%= notice %></p>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times; </a>
+    </div>
   </div>
+</div>
 <% end %>
+
 <% if alert %>
-  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
-    <%= alert %>
-    <button type="button" class="close col-lg-6 col-md-8 py-8 py-xl-0" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+<div class="container-fluid">
+  <div>
+    <div class="flash flash-warning alert center-block alert-dismissible fade show" role="alert">
+      <p class="flash-notice"><%= alert %></p>
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    </div>
   </div>
+</div>
 <% end %>
