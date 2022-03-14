@@ -1,13 +1,17 @@
 .footer-pushflo {
-  background-color: #ebebeb !important;
+  background-color: #F4F3F7 !important;
   display: flex;
   width: 100%;
   justify-content: space-between;
   opacity: 1;
   margin: 0;
-  position: fixed;
+
 }
 
 .flash-notice {
   width: auto;
+}
+
+.border-top-bold {
+  border-top: 1px solid #707070 !important;
 }
