@@ -33,7 +33,7 @@
             <!-- Buttons -->
             <div class="mb-8 mb-lg-0">
               <a href="#" >
-                <%= link_to "Browse All Workflows", workflows_path, class:"btn btn-primary  card-hover " %>
+                <%= link_to "Browse All Workflows", workflows_path, class:"btn btn-primary  card-hover hvr-sink " %>
               </a>
 
             </div>
@@ -228,13 +228,13 @@ Category END -->
           <div class="row">
             <div class="col-lg-12 col-md-12 col-12">
               <div class="mb-5">
-                <h1 class="display-4 fw-bold pb-2">📌 Featured Workflows</h1>
+                <h1 class="display-4 fw-bold pb-2">📌 Recently Added Workflows</h1>
                 <p class="mb-0"></p>
               </div>
             </div>
             </div>
             <div class="row">
-              <%  Workflow.all.sample(4).each do |workflow|%>
+              <%  Workflow.all.last(4).each do |workflow|%>
                 <div class="col-lg-3 col-md-6 col-12">
                   <!-- Card -->
 
@@ -244,7 +244,7 @@ Category END -->
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
                     <div class="card-body">
-                      <h4 class="mb-1 text-truncate-line-2 "><a href="" class="text-inherit"><%= link_to workflow.title, workflow_path(workflow) %></a>
+                      <h4 class="mb-1 text-truncate-line-2 font-weight-bold  "><a href="" class="text-inherit"><%= link_to workflow.title, workflow_path(workflow) %></a>
                       </h4>
                        <!-- List inline -->
                       <ul class="mb-0 list-inline">
@@ -275,156 +275,7 @@ Category END -->
                 </div>
             <%end%>
 
-            <%# <div class="col-lg-3 col-md-6 col-12">
-            <!-- Card -->
-            <div class="card  mb-4 card-hover">
-                    <iframe href="course-single.html" class="card-img-top" src="https://www.loom.com/embed/cd40bc0d574b4edf90e7194990282dd5" alt=""
-                        class="card-img-top rounded-top-md"></iframe>
-            <!-- Card body -->
-            <div class="card-body">
-              <h3 class="h4 mb-2 text-truncate-line-2 "><a href="#" class="text-inherit">GraphQL:
-                  introduction to graphQL for beginners</a></h3>
-              <ul class="mb-3 list-inline">
-                <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i>2h 46m</li>
-                <li class="list-inline-item"><svg class="me-1 mt-n1" width="16" height="16" viewBox="0 0 16 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                    <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                    <rect x="11" y="2" width="2" height="12" rx="1" fill="#754FFE"></rect>
-                  </svg>Advance </li>
-              </ul>
-              <div class="lh-1">
-                <span>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning"></i>
-                </span>
-                <span class="text-warning">4.5</span>
-                <span class="fs-6 text-muted">(4,300)</span>
-              </div>
-            </div>
-            <!-- Card Footer -->
-            <div class="card-footer">
-              <div class="row align-items-center g-0">
-                <div class="col-auto">
-                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Nelson_rr2idp.jpg" class="rounded-circle avatar-xs" alt="">
-                </div>
-                <div class="col ms-2">
-                  <span>Ted Hawkins</span>
-                </div>
-                <div class="col-auto">
-                 <a href="#" class="text-muted bookmark">
-                    <i class="fe fe-bookmark  "></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <!-- Card -->
-              <div class="card  mb-4 card-hover">
-                    <iframe href="course-single.html" class="card-img-top" src="https://www.loom.com/embed/cd40bc0d574b4edf90e7194990282dd5" alt=""
-                        class="card-img-top rounded-top-md"></iframe>
-            <!-- Card body -->
-            <div class="card-body">
-              <h3 class="h4 mb-2 text-truncate-line-2 "><a href="#" class="text-inherit">Angular - the
-                  complete guide for beginner</a></h3>
-              <ul class="mb-3  list-inline">
-                <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i>1h 30m</li>
-                <li class="list-inline-item"><svg class="me-1 mt-n1" width="16" height="16" viewBox="0 0 16 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                    <rect x="7" y="5" width="2" height="9" rx="1" fill="#DBD8E9"></rect>
-                    <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
-                  </svg>Beginner </li>
-              </ul>
-              <div class="lh-1">
-                <span>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning"></i>
-                </span>
-                <span class="text-warning">4.5</span>
-                <span class="fs-6 text-muted">(5,410)</span>
-              </div>
-            </div>
-            <!-- Card footer -->
-            <div class="card-footer">
-              <div class="row align-items-center g-0">
-                <div class="col-auto">
-                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Nelson_rr2idp.jpg" class="rounded-circle avatar-xs" alt="">
-                </div>
-                <div class="col ms-2">
-                  <span>Juanita Bell</span>
-                </div>
-                <div class="col-auto">
-                 <a href="#" class="text-muted bookmark">
-                    <i class="fe fe-bookmark  "></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-12">
-          <!-- Card -->
-          <div class="card  mb-4 card-hover">
-                    <iframe href="course-single.html" class="card-img-top" src="https://www.loom.com/embed/cd40bc0d574b4edf90e7194990282dd5" alt=""
-                        class="card-img-top rounded-top-md"></iframe>
-            <!-- Card body -->
-            <div class="card-body">
-              <h3 class="h4 mb-2 text-truncate-line-2 "><a href="#" class="text-inherit">The Python
-                  Course: build web application</a></h3>
-              <ul class="mb-3  list-inline">
-                <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted me-1"></i>2h 30m</li>
-                <li class="list-inline-item"><svg class="me-1 mt-n1" width="16" height="16" viewBox="0 0 16 16"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="8" width="2" height="6" rx="1" fill="#754FFE"></rect>
-                    <rect x="7" y="5" width="2" height="9" rx="1" fill="#754FFE"></rect>
-                    <rect x="11" y="2" width="2" height="12" rx="1" fill="#DBD8E9"></rect>
-                  </svg>Intermediate </li>
-              </ul>
-              <div class="lh-1">
-                <span>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning me-n1"></i>
-                  <i class="mdi mdi-star text-warning"></i>
-                </span>
-                <span class="text-warning">4.5</span>
-                <span class="fs-6 text-muted">(9,300)</span>
-              </div>
-            </div>
-            <!-- Card footer -->
-            <div class="card-footer">
-              <div class="row align-items-center g-0">
-                <div class="col-auto">
-                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Nelson_rr2idp.jpg
-                  " class="rounded-circle avatar-xs" alt="">
-                </div>
-                <div class="col ms-2">
-                  <span>Claire Robertson</span>
-                </div>
-                <div class="col-auto">
-                 <a href="#" class="text-muted bookmark">
-                    <i class="fe fe-bookmark  "></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-12">
-        %>
+
 
 
               </div>
@@ -606,7 +457,7 @@ Category END -->
               <!-- btn -->
             <div class="mb-lg-10">
               <a href="#" >
-                <%= link_to "⤴️ Upload Workflow", new_workflow_path, class:"btn btn-primary  card-hover " %>
+                <%= link_to "⤴️ Upload Workflow", new_workflow_path, class:"btn btn-primary  card-hover  hvr-sink " %>
               </a>
 
             </div>

@@ -29,7 +29,8 @@
                   </a>
 
                  <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i> <img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/<%= @workflow.program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%=  link_to @workflow.program + " Workflows", program_path(filter: @workflow.program) , class:"text-secondary"   %></strong>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i> <img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/<%= @workflow.program%>.png" class="pb-1 img-fluid" alt="">
+                        &nbsp;<strong><%=  link_to @workflow.program + " Workflows", program_path(filter: @workflow.program) , class:"text-secondary"   %></strong>
                         </li>
                       </ul>
               </div>
@@ -53,7 +54,7 @@
                     <%= simple_form_for [@favourite] do |f| %>
                       <%= f.hidden_field :workflow_id, value: @workflow.id %>
                       <%= f.hidden_field :user_id, value: current_user.id %>
-                      <%= f.submit "✨ Favourite", class: "btn btn-primary" %>
+                      <%= f.submit "✨ Favourite", class: "button-4-favourite card-hover" %>
                     <% end %>
 
 
@@ -73,8 +74,9 @@
                   <div class="mb-10">
                    <div class="d-flex justify-content-between align-items-center">
                     <h3 class="mb-2 pl-3 fw-semi-bold">📝 Walkthrough Notes</h3>
-                    <a class= "button-4 ", style="",href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647104273/development/ <%=@workflow.SDprofile.key%>.streamDeckProfile"><span> <img class= "pb-1" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png">&nbsp;STREAM DECK Profile Download </a>
+                    <a class= "SDbutton card-hover  hvr-icon-down ", style="", href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647376147/development/<%=@workflow.SDprofile.key%>.streamDeckProfile" title= "Download Stream Deck Profile">  <img class= "pb-1" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png">&nbsp;Download <i class="fa fa-arrow-circle-o-down fa-lg hvr-icon "></i></a>
                 </div>
+
                     <p>
                       <%= @workflow.content %>
                     </p>
