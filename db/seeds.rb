@@ -8,12 +8,46 @@ require "open-uri"
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
 Favourite.destroy_all
 Workflow.destroy_all
 User.destroy_all
 
 pushflo = User.create!(first_name:"Dave", last_name:"Sellick", user_name:"dave", email:"dave@pushflo.com", password:"1234567", admin: true)
 puts "created user"
+
+
+# #program images:
+# Notion = URI.open("https://res.cloudinary.com/dza6mn30y/image/upload/v1645988609/Pushflo/Images/icons/Notion_umximk.png")
+# Excel = URI.open('https://res.cloudinary.com/dza6mn30y/image/upload/v1645988609/Pushflo/Images/icons/Excel_1_ieek2g.png')
+# Outlook = URI.open('https://res.cloudinary.com/dza6mn30y/image/upload/v1645877205/Pushflo/Images/icons/Icons_Feb21_15_trfkcg.png')
+
+
+
+# #programs:
+# notion = Program.create!(name: "Notion")
+# notion.photo.attach(io: Notion,filename: "notion.png", content_type: 'image/jpg')
+# notion.save!
+#   puts "created program"
+
+# excel = Program.create!(name: "Excel")
+# excel.photo.attach(io: Excel, filename: "excel.png", content_type: 'image/jpg')
+# excel.save!
+
+#   puts "created program"
+
+# outlook = Program.create!(name: "Outlook")
+# outlook.photo.attach(io: Outlook, filename: "outlook.png", content_type: 'image/jpg')
+# outlook.save!
+#   puts "created program"
+
+
+# loom = Program.create!(name: "Loom")
+# loom.photo.attach(io: Loom, filename: "loom.png", content_type: 'image/jpg')
+# loom.save!
+# puts "created program"
+
 
 
 10.times do

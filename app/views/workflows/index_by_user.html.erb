@@ -1,51 +1,37 @@
 
 
+
   <!-- Page header -->
-  <div class=" py-4 py-lg-6">
+  <div class=" pt-lg-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-          <div>
-            <h1 class="text-black display-4"> Workflows uploaded by <%= User.find_by(user_name: params[:filter]).first_name + " " + User.find_by(user_name: params[:filter]).last_name %></h1>
-          </div>
+
+            <h1 class="text-black display-4"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-md" alt=""> Workflows uploaded by <%= User.find_by(user_name: params[:filter]).first_name + " " + User.find_by(user_name: params[:filter]).last_name %></h1>
         </div>
       </div>
     </div>
   </div>
   <!-- Content -->
-  <div class="py-2">
+  <div >
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
           <div class="row d-lg-flex justify-content-between align-items-center">
             <div class="col-md-6 col-lg-8 col-xl-9 ">
-              <h4 class="mb-3 mb-lg-0">Displaying 9 out of 68 courses</h4>
+     <h4 class="mb-1 mb-lg-0">Displaying <%= @workflows.all.count%> out of <%= Workflow.all.count%> Workflows</h4>
             </div>
             <div class="d-inline-flex col-md-6 col-lg-4 col-xl-3 ">
               <div class="me-2">
                 <!-- Nav -->
-                <div class="nav btn-group flex-nowrap" role="tablist">
-                  <button class="btn btn-outline-white active" data-bs-toggle="tab" data-bs-target="#tabPaneGrid" role="tab"
-                    aria-controls="tabPaneGrid" aria-selected="true">
-                    <span class="fe fe-grid"></span>
-                  </button>
-                  <button class="btn btn-outline-white" data-bs-toggle="tab" data-bs-target="#tabPaneList" role="tab"
-                    aria-controls="tabPaneList" aria-selected="false">
-                    <span class="fe fe-list"></span>
-                  </button>
-                </div>
+
               </div>
               <!-- List  -->
-              <select class="selectpicker" data-width="100%">
-                <option value="">Sort by</option>
-                <option value="Newest">Newest</option>
-                <option value="Free">Free</option>
-                <option value="Most Popular">Most Popular</option>
-                <option value="Highest Rated">Highest Rated</option>
-              </select>
-            </div>
+
           </div>
         </div>
+
+
         <!-- Content -->
         <div class="row mt-0 mt-md-4">
 				<div class="col-lg-3 col-md-4 col-12">
@@ -61,10 +47,10 @@
 						</button>
 						<!-- Collapse navbar -->
 						<div class="collapse navbar-collapse" id="sidenav">
-							<div class="navbar-nav flex-column">
-                <ul class="list-unstyled ms-n2 mb-0 pb-3">
+							<div class="navbar-nav flex-column pt-3 pb-8">
+                <ul class="list-unstyled ms-n2 mb-0 pb-1">
                   <li class="nav-item">
-								  	<a class="nav-link" href=""><i class="fe fe-settings nav-icon"></i><u>View All</u></a>
+								  	<a class="nav-link" href="/workflows"><i class="fe fe-settings nav-icon"></i><strong>View All</strong></a>
 								  </li>
                 </ul>
 								  <span class="navbar-header">Categories</span>
@@ -72,46 +58,46 @@
 								<ul class="list-unstyled ms-n2 mb-0">
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Outlook"><i class="fe fe-settings nav-icon"></i>Outlook</a>
+										<a class="nav-link" href="/program?filter=Outlook"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Outlook.png"></i>Outlook</a>
 									</li>
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Notion"><i class="fe fe-user nav-icon"></i>Notion</a>
+										<a class="nav-link" href="/program?filter=Notion"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Notion.png"></i>Notion</a>
 									</li>
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Excel"><i class="fe fe-refresh-cw nav-icon"></i>Excel</a>
+										<a class="nav-link" href="/program?filter=Excel"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Excel.png"></i>Excel</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Loom"><i class="fe fe-bell nav-icon"></i>Loom</a>
-									</li>
-									<!-- Nav item -->
-									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Xero"><i class="fe fe-lock nav-icon"></i>Xero</a>
+										<a class="nav-link" href="/program?filter=Loom"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Loom.png"></i>Loom</a>
 									</li>
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Dext"><i class="fe fe-trash nav-icon"></i>Dext</a>
+										<a class="nav-link" href="/program?filter=Xero"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Xero.png"></i>Xero</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="/program?filter=Dext"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Dext.png"></i>Dext</a>
 									</li>
 										<!-- Nav item -->
 										<li class="nav-item">
-											<a class="nav-link " href="/program?filter=Zoom"><i class="fe fe-user nav-icon"></i>Zoom</a>
+											<a class="nav-link " href="/program?filter=Zoom"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Zoom.png"></i>Zoom</a>
 										</li>
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="/program?filter=Photoshop"><i class="fe fe-power nav-icon"></i>Photoshop</a>
+										<a class="nav-link" href="/program?filter=Photoshop"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Photoshop.png"></i>Photoshop</a>
 									</li>
                   <li class="nav-item">
-										<a class="nav-link" href="/program?filter=Premiere"><i class="fe fe-power nav-icon"></i>Premiere</a>
+										<a class="nav-link" href="/program?filter=Premiere"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Premiere.png"></i>Premiere</a>
 									</li>
                   <li class="nav-item">
-										<a class="nav-link" href="/program?filter=Ableton Live"><i class="fe fe-power nav-icon"></i>Ableton Live</a>
+										<a class="nav-link" href="/program?filter=Ableton Live"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Ableton Live.png"></i>Ableton Live</a>
 									</li>
                   <li class="nav-item">
-										<a class="nav-link" href="/program?filter=Gmail"><i class="fe fe-power nav-icon"></i>Gmail</a>
+										<a class="nav-link" href="/program?filter=Gmail"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Gmail.png"></i>Gmail</a>
 									</li>
                   <li class="nav-item">
-										<a class="nav-link" href="/program?filter=Snagit"><i class="fe fe-power nav-icon"></i>Snagit</a>
+										<a class="nav-link" href="/program?filter=Snagit"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Snagit.png"></i>Snagit</a>
 									</li>
 								</ul>
 							</div>
@@ -142,7 +128,7 @@
                       </h4>
                        <!-- List inline -->
                       <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><%= link_to workflow.program, program_path(filter: workflow.program), class:"text-secondary"  %>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_15/v1647351098/Pushflo/Category%20Icons/<%= workflow.program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%= link_to workflow.program, program_path(filter: workflow.program), class:"text-secondary"  %></strong>
                         </li>
                       </ul>
 

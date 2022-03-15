@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_10_210424) do
+ActiveRecord::Schema.define(version: 2022_03_15_104516) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,12 @@ ActiveRecord::Schema.define(version: 2022_03_10_210424) do
     t.index ["workflow_id"], name: "index_favourites_on_workflow_id"
   end
 
+  create_table "programs", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -80,9 +86,9 @@ ActiveRecord::Schema.define(version: 2022_03_10_210424) do
 
   create_table "workflows", force: :cascade do |t|
     t.string "title"
-    t.text "description"
+    t.string "description"
     t.text "walkthrough"
-    t.text "program"
+    t.string "program"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
