@@ -37,6 +37,7 @@ require("packs/tnsSlider")
 // const theme = require("packs/theme.min")
 // require("packs/tooltip")
 // require("packs/loom.js")
+require("packs/upload")
 import {loomUpload} from "packs/loom"
 import {main} from "packs/main"
 

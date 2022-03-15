@@ -28,19 +28,24 @@
       <div id="courseForm" class="form-inputs text-dark-primary text-body-bold  px-12">
     <%= simple_form_for [@workflow] do |f| %>
     <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
-     <%= f.label :description, :required => false, :label => "❓(OPTIONAL) Description" , as: :text, input_html: {rows: 1},:class => 'form_label' %>  <span class="form_h2"> - 1 sentence headline</span>
+     <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label' %>  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span>
      <%= f.input :description, label: false , :input_html => {:rows => 1} %>
      <%= f.label :content, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
     <%= f.input :program, label: false, :input_html => {:rows => 1}  %>
-    <%= f.label :content, :required => false, :label => "📝 (OPTIONAL) Written Walkthough & ⤴️ Profile Upload", :class => 'form_label'  %> <span class="form_h2"> - use the link icon 🔗 to attach a Streamdeck Profile</span>
+    <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
     <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
-    <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (paste below 👇)</span>
+    <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (OPTIONAL)</span>
     <%= f.input :loom_url, label: false  %>
-    <%= f.input :SDprofile, as: :file %>
+    <span> <img class= "pl-2 pb-2" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_32/v1647303175/Pushflo/Images/icons/1200px-Elgato_logo.svg_hpuiyp.png"></span><span class="form_h2"> - <strong> Upload a  STREAM DECK Profile</strong> (OPTIONAL)</span>
+    <%= f.input :SDprofile, as: :file,  label: false, input_html: { id: "SD-button"}, required: false %>
+
+
 
 
     <%= f.hidden_field :user_id, value: current_user.id %>
+    <div>
     <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-4" %>
+    </div>
     <% end %>
 </div>
 
