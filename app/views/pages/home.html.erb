@@ -63,7 +63,7 @@ Category START -->
 				      <div class="ms-3">
 
 					    <h3 class="fw-bold", style= "text-decoration: none;">Notion</h3>
-							<span>10 Workflows</span>
+							<span><%=Workflow.where(program:"Notion").all.count%> Workflows</span>
 					</div>
 					  </div>
 			  	</div>
@@ -81,7 +81,7 @@ Category START -->
 						<div class="ms-3">
 
 							<h3 class="fw-bold">Excel</h3>
-							<span>10 Workflows</span>
+							<span><%= Workflow.where(program:"Excel").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -99,7 +99,7 @@ Category START -->
 						<div class="ms-3">
 
 								<h3 class="fw-bold">Gmail</h3>
-							<span>10 Workflows</span>
+							<span><%=Workflow.where(program:"Gmail").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -117,7 +117,7 @@ Category START -->
 						<div class="ms-3">
 
 								<h3 class="fw-bold">Slack</h3>
-							<span>10 Workflows</span>
+							<span><%=Workflow.where(program:"Notion").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -135,7 +135,7 @@ Category START -->
 						<div class="ms-3">
 
 							<h3 class="fw-bold">Loom</h3>
-							<span>10 Workflows</span>
+							<span><%=Workflow.where(program:"Loom").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -153,7 +153,7 @@ Category START -->
 						<div class="ms-3">
 
 							<h3 class="fw-bold">VS Code</h3>
-							<span>10 Workflows</span>
+							<span><%= Workflow.where(program:"VS Code").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -171,7 +171,7 @@ Category START -->
 						<div class="ms-3">
 
 								<h3 class="fw-bold">G Sheets</h3>
-							<span>10 Workflows</span>
+							<span><%=Workflow.where(program:"G Sheets").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -189,7 +189,7 @@ Category START -->
 						<div class="ms-3">
 
 								<h3 class="fw-bold">Outlook</h3>
-							<span>10 Workflows</span>
+							<span><%=Workflow.where(program:"Outlook").all.count%> Workflows</span>
 						</div>
 					</div>
 				</div>
@@ -529,7 +529,7 @@ Category END -->
              <!-- card body -->
             <div class="card-body">
               <h3 class="mb-0 fw-semi-bold"><a href="#" class="text-inherit">Roel</a></h3>
-              <p class="mb-3">Specialisms : <strong>JavaScript, Ruby</strong></p>
+              <p class="mb-3">Specialisms : <strong>VS Code, Notion</strong></p>
               <div class="lh-1  d-flex justify-content-between">
 
                 <div>
