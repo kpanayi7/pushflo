@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   put 'users/:id', to: 'users#update'
 
   resources :workflows, only: [:new, :create, :update, :edit,:index, :show, :uploads]
+  resources :programs, only: [ :show], as: 'icons'
 
   get 'program', to: 'workflows#index_by_program', as: :program
   get 'user_workflows', to: 'workflows#index_by_user', as: :user_workflows
