@@ -32,9 +32,12 @@
             </ul>
             <!-- Buttons -->
             <div class="mb-8 mb-lg-0">
-              <a href="#" >
-                <%= link_to "Browse All Workflows", workflows_path, class:"btn btn-primary  card-hover  " %>
-              </a>
+
+              <%= link_to workflows_path  do %>
+                <button class="btn btn-primary card-hover hvr-icon-forward">
+              Browse All Workflows  <span><i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i></span>
+                </button>
+              <% end %>
 
             </div>
 
