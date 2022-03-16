@@ -37,16 +37,10 @@
     <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (OPTIONAL)</span>
     <%= f.input :loom_url, label: false  %>
     <span> <img class= "pl-2 pb-2" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png"></span><span class="form_h2"> - <strong> 🔗 STREAM DECK Profile</strong> (OPTIONAL)</span>
-    
-    
-    <p>
-  
-    <% if @post.image.exists? %>
-      <%= image_tag @post.image.url(:med) %>
-    <% end %>
-    <%= f.file_field :image %>
-</p>
-    
+
+
+
+
     <%= f.input :SDprofile, as: :file,  label: false, input_html: { id: "SD-button"}, required: false %>
 
 
