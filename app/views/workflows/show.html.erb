@@ -51,6 +51,17 @@
                 </div>
                 <div>
 
+            <% if Favourite.where(user_id: current_user, workflow_id: @workflow.id).exists? then %>
+
+                    <%= form_for(current_user.favourites.find_by(workflow_id: @workflow.id), html: { method: :delete }, remote: true) do |f| %>
+                     <button type="submit" class= "button-favourited hvr-icon-pop"  >
+                    <span style="color:gold;"><i class="fa fa-star fa-lg hvr-icon "></i></span>  Favourited
+                     </button>
+                    <% end %>
+
+
+                <%else%>
+
                     <%= simple_form_for [@favourite] do |f| %>
                       <%= f.hidden_field :workflow_id, value: @workflow.id %>
                       <%= f.hidden_field :user_id, value: current_user.id %>
@@ -58,7 +69,7 @@
                     <span style="color:gold;"><i class="fa fa-star fa-lg hvr-icon "></i></span>  Favourite
                      </button>
                     <% end %>
-
+                 <% end %>
 
                 </div>
               </div>

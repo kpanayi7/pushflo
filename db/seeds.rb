@@ -17,6 +17,8 @@ User.destroy_all
 pushflo = User.create!(first_name:"Dave", last_name:"Sellick", user_name:"dave", email:"dave@pushflo.com", password:"1234567", admin: true)
 puts "created user"
 
+"
+
 
 # #program images:
 # Notion = URI.open("https://res.cloudinary.com/dza6mn30y/image/upload/v1645988609/Pushflo/Images/icons/Notion_umximk.png")
