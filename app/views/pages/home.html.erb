@@ -35,7 +35,7 @@
 
               <%= link_to workflows_path  do %>
                 <button class="btn btn-primary card-hover hvr-icon-forward">
-              Browse All Workflows  <span><i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i></span>
+              Browse All Workflows  <span>&nbsp;<i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i></span>
                 </button>
               <% end %>
 
@@ -54,10 +54,10 @@ Category START -->
 
 			<!-- Category item -->
 
-			<div class="col-sm-6 col-lg-4 col-xl-3">
+			<div class="col-sm-6 col-lg-4 col-xl-3 " >
       <%= link_to program_path(filter: "Notion"),  style: "text-decoration: none;" do %>
 
-				<div class="card card-body  card-hover bg-light ">
+				<div class="card card-body  card-hover bg-light  ">
 
 					    <div class="d-flex align-items-center">
 						<!-- Icon -->
@@ -242,7 +242,7 @@ Category END -->
                   <!-- Card -->
 
 
-                  <div class="card  mb-4 card-hover">
+                  <div class="card  mb-4 card-hover homecard hvr-grow ">
                   <iframe  class="card-img-top" src= <%= workflow.loom_url.gsub(/\bshare\b/, 'embed') %> alt=""
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
@@ -318,7 +318,7 @@ Category END -->
       <div class="row">
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 ">
            <!-- card -->
-          <div class="card mb-4 card-hover">
+          <div class="card mb-4 card-hover hvr-bob">
              <!-- img -->
             <div class="card-img-top">
               <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Nelson_rr2idp.jpg" alt="" class="rounded-top-md img-fluid">
@@ -337,7 +337,7 @@ Category END -->
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12">
            <!-- card -->
-          <div class="card mb-4 card-hover">
+          <div class="card mb-4 card-hover hvr-bob">
              <!-- img -->
             <div class="card-img-top">
               <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" alt="" class="rounded-top-md img-fluid">
@@ -356,7 +356,7 @@ Category END -->
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12">
            <!-- card -->
-          <div class="card mb-4 card-hover">
+          <div class="card mb-4 card-hover hvr-bob">
              <!-- img -->
             <div class="card-img-top">
               <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/Copy_of_Kyri_ygvzqc.jpg" alt="" class="rounded-top-md img-fluid">
@@ -375,7 +375,7 @@ Category END -->
         </div>
         <div class="col-xl-3 col-lg-4 col-md-6 col-12 d-lg-none d-xl-block">
            <!-- card -->
-          <div class="card mb-4 card-hover">
+          <div class="card mb-4 card-hover hvr-bob">
              <!-- img -->
             <div class="card-img-top">
               <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777262/Pushflo/Avatars/Copy_of_Roel_padott.jpg" alt="" class="rounded-top-md img-fluid">
