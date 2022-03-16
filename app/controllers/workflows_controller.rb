@@ -54,8 +54,10 @@ class WorkflowsController < ApplicationController
 
 
   def show
+
     @workflow = Workflow.find(params[:id])
     @favourite = Favourite.new
+
   end
 
   def uploads

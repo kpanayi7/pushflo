@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'user_workflows', to: 'workflows#index_by_user', as: :user_workflows
   get 'workflows', to: 'workflows#uploads', as: :uploads
 
-  resources :favourites, only: [:create]
+  resources :favourites, only: [:create, :destroy]
   get 'users/:id/favourites', to: 'favourites#index', as: 'favourited' do
     resources :workflows
   end
