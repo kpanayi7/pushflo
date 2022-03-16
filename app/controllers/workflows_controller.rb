@@ -1,5 +1,6 @@
 class WorkflowsController < ApplicationController
-  before_action :find_workflow, only: [:show]
+  before_action :find_workflow, only: [:show, :edit]
+
 
   def index
     @workflows = Workflow.all
@@ -31,6 +32,8 @@ class WorkflowsController < ApplicationController
   end
 
 
+
+
   def create
     @workflow = Workflow.new(workflow_params)
     @workflow.user = current_user
@@ -40,6 +43,15 @@ class WorkflowsController < ApplicationController
       render :new
     end
   end
+
+
+  def edit
+    @workflow_id = Workflow.find(params[:id])
+    render :edit
+  end
+
+
+
 
   def show
     @workflow = Workflow.find(params[:id])

@@ -1,0 +1,54 @@
+  <div class="py-2 pt-lg-6 ">
+    <div class="container">
+      <div class="row">
+        <div class="offset-lg-1 col-lg-10 col-md-12 col-12">
+          <div class="d-lg-flex align-items-center justify-content-between">
+            <!-- Content -->
+            <div class="mb-4 mb-lg-0">
+              <h2 class="display-4 fw-bold ">⤴️ Submit a New Workflow</h2>
+              <p class="mb-0 text-black lead">
+
+              </p>
+            </div>
+                <div>
+                  <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
+                  <%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-dark card-hover " %>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container px-14 py-2 pb-4  ">
+  <div id="loomrecord" class=""><button class="button-4 text center align-middle"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_28/v1646954811/Pushflo/Images/icons/Loom_bm_wr6oyl.png">  Record a Loom</button></div>
+  </div>
+  <!-- Page Content -->
+  <div class="pb-10">
+    <div class="container">
+      <div id="courseForm" class="form-inputs text-dark-primary text-body-bold  px-12">
+    <%= simple_form_for [@workflow] do |f| %>
+    <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
+     <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label' %>  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span>
+     <%= f.input :description, label: false , :input_html => {:rows => 1} %>
+     <%= f.label :program, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
+
+    <%= f.input :program, label: false, :input_html => {:rows => 1}  %>
+    <%= f.input :program, collection: [ "Helvetica, Arial, sans-serif"]%>
+    <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
+    <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
+    <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (OPTIONAL)</span>
+    <%= f.input :loom_url, label: false  %>
+    <span> <img class= "pl-2 pb-2" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png"></span><span class="form_h2"> - <strong> 🔗 STREAM DECK Profile</strong> (OPTIONAL)</span>
+    <%= f.input :SDprofile, as: :file,  label: false, input_html: { id: "SD-button"}, required: false %>
+
+
+
+
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <div>
+    <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-4  hvr-wobble-to-top-right" %>
+    </div>
+    <% end %>
+</div>
+
+<div class="container pt-20"> </div>
