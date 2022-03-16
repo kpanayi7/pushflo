@@ -23,6 +23,8 @@
                   <%= @workflow.title %>
                 </h1>
              </div>
+
+                <% if @workflow.user_id == current_user.id then %>
              <div class="p-3 align-middle">
                       <%= link_to edit_workflow_path  do %>
                     <button class="edit-button card-hover hvr-icon-pulse ">
@@ -31,6 +33,8 @@
                     <% end %>
 
                     </div>
+                         <%else%>
+                         <% end %>
                   <div>
 
 
@@ -52,7 +56,7 @@
                 </div>
               <div class="d-flex justify-content-between">
                 <div class="d-flex align-items-center">
-                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-md" alt="" />
+                 <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=User.find(@workflow.user_id).first_name%>.jpg" class="rounded-circle avatar-sm" alt="">
                   <div class="ms-2 lh-1">
 
                     <h4 class="mb-1 text-truncate-line-2 text-inherit "> <%= link_to User.find(@workflow.user_id).first_name + " " + User.find(@workflow.user_id).last_name, user_workflows_path(filter:User.find(@workflow.user_id).user_name )%>
@@ -102,7 +106,14 @@
                   <div class="mb-10">
                    <div class="d-flex justify-content-between align-items-center">
                     <h3 class="mb-2 pl-3 fw-semi-bold">📝 Walkthrough Notes</h3>
+
+
+                      <% if @workflow.SDprofile.key == nil then %>
+                    <%else%>
                     <a class= "SDbutton card-hover  hvr-icon-sink ", style="", href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647376147/development/<%=@workflow.SDprofile.key%>.streamDeckProfile" title= "Download Stream Deck Profile">  <img class= "pb-1" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png">&nbsp;Download <i class="fa fa-arrow-circle-o-down fa-lg hvr-icon "></i></a>
+                    <% end %>
+
+
                 </div>
 
                     <p>

@@ -86,9 +86,9 @@ ActiveRecord::Schema.define(version: 2022_03_15_104516) do
 
   create_table "workflows", force: :cascade do |t|
     t.string "title"
-    t.text "description"
+    t.string "description"
     t.text "walkthrough"
-    t.text "program"
+    t.string "program"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

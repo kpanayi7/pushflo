@@ -1,5 +1,5 @@
        <!-- Page Content -->
-    <div class="py-lg-14 py-10 position-relative bg-cover"
+    <div class="py-lg-12 pt-lg-14 py-10 position-relative bg-cover"
      style="background: url(https://res.cloudinary.com/dza6mn30y/image/upload/v1646607322/Pushflo/Images/Homepage_icons_HQ_pgjjst.png)no-repeat , linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%), rgba(221, 218, 255, 0.3) ; background-size: cover; background-position: top center"
       style="background-image:
       url(https://res.cloudinary.com/dza6mn30y/image/upload/v1645886037/Pushflo/Images/gradient-bg_atci5d.png);"
@@ -237,7 +237,7 @@ Category END -->
             </div>
             </div>
             <div class="row">
-              <%  Workflow.all.last(4).each do |workflow|%>
+              <%  Workflow.order("created_at DESC").limit(4).each do |workflow|%>
                 <div class="col-lg-3 col-md-6 col-12">
                   <!-- Card -->
 
@@ -261,7 +261,7 @@ Category END -->
                        <!-- Row -->
                       <div class="row align-items-center g-0">
                         <div class="col-auto">
-                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=User.find(workflow.user_id).first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
                           <span><%= link_to User.find(workflow.user_id).first_name + " " + User.find(workflow.user_id).last_name, user_workflows_path(filter:User.find(workflow.user_id).user_name ) , class:"text-secondary" %></span>

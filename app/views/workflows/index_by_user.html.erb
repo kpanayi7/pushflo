@@ -7,7 +7,7 @@
       <div class="row align-items-center">
         <div class="col-xl-12 col-lg-12 col-md-12 col-12">
 
-            <h1 class="text-black display-4"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-md" alt=""> Workflows uploaded by <%= User.find_by(user_name: params[:filter]).first_name + " " + User.find_by(user_name: params[:filter]).last_name %></h1>
+            <h1 class="text-black display-4"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_55/v1646777172/Pushflo/Avatars/<%=User.find_by(user_name: params[:filter]).first_name %>.jpg" class="rounded-circle " alt=""> Workflows uploaded by <%= User.find_by(user_name: params[:filter]).first_name + " " + User.find_by(user_name: params[:filter]).last_name %></h1>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
 
 
         <!-- Content -->
-        <div class="row mt-0 mt-md-4">
+        <div class="row mt-0 mt-md-4 ">
 				<div class="col-lg-3 col-md-4 col-12">
 					<!-- Side navbar -->
 					<nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 mb-lg-0 sidenav">
@@ -138,7 +138,8 @@
                        <!-- Row -->
                       <div class="row align-items-center g-0">
                         <div class="col-auto">
-                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=User.find(workflow.user_id).first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
+
                         </div>
                         <div class="col ms-2">
                            <span class=" text-secondary"> <%=  User.find(workflow.user_id).first_name + " " + User.find(workflow.user_id).last_name %> </span>
@@ -160,3 +161,5 @@
 </div>
 </div>
 </div>
+
+<div class="container pb-lg-20"></div>

@@ -5,11 +5,26 @@
       <%= image_tag "https://res.cloudinary.com/dza6mn30y/image/upload/v1645875304/Pushflo/Branding/Icon_multicolour_g7gkay.png" %>
     <% end %>
 
-  <div class="container d-flex pl-5 justify-content-center">
+  <div class="brand">
     <%# <a class="navbar-brand" href="#"> %>
       <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874190/Pushflo/Branding/the_Pushflo_Hub_Logo_xinztt.png" alt="Logo" style="width:300px;">
     <%# </a> %>
   </div>
+
+        <div class="ms-auto mt-3 mt-lg-0">
+
+      <% if current_page?(workflows_path ) ||  current_page?(program_path)|| current_page?(user_workflows_path) || current_page?(root_path)  then %>
+
+
+      <% else %>
+
+   <%= link_to workflows_path  do %>
+                <button class="btn btn-outline-primary mr-lg-5 hvr-icon-forward">
+              All Workflows  <span>&nbsp;<i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i></span>
+                </button>
+              <% end %>
+<% end %>
+			</div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -20,7 +35,9 @@
         <% if user_signed_in? %>
 
           <li class="nav-item dropdown">
-            <%= image_tag "https://avatars.githubusercontent.com/u/88489318?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/#{current_user.first_name}.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+
+
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My Account", profile_path, class: "dropdown-item" %>
               <%= link_to "My Favourites/Uploads", favourited_path(current_user), class: "dropdown-item" %>

@@ -10,3 +10,13 @@
 .navbar-lewagon .navbar-brand img {
   width: 50px;
 }
+
+.brand {
+
+    position: absolute;
+    left: 50%;
+    margin-left: -120px !important;  /* 50% of your logo width */
+    display: block;
+    padding-right: 100px;
+
+}
