@@ -16,26 +16,37 @@
           <!-- Card -->
           <div class="card mb-5">
             <!-- Card body -->
-            <div class="card-body pt-3">
-              <div class="d-flex justify-content-between align-items-center">
+            <div class="card-body pt-2">
+              <div class="d-flex">
+              <div class="p-2">
                 <h1 class="fw-semi-bold mb-0">
                   <%= @workflow.title %>
                 </h1>
+             </div>
+             <div class="p-3 align-middle">
+                      <%= link_to edit_workflow_path  do %>
+                    <button class="edit-button card-hover hvr-icon-pulse ">
+                    <span>&nbsp;<i  class = "fa fa-edit fa-2x pt-1   hvr-icon"></i></span>
+                    </button>
+                    <% end %>
+
+                    </div>
                   <div>
 
-                      </div>
-                  <a href="#" data-bs-toggle="tooltip" data-placement="top"  title="Add to Bookmarks">
-                  <i class="fe fe-bookmark fs-3 text-inherit"></i>
-                  </a>
 
+                      </div>
+
+
+  <div class="ml-auto p-2 pt-lg-3">
                  <ul class="mb-0 list-inline">
                         <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i> <img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/<%= @workflow.program%>.png" class="pb-1 img-fluid" alt="">
                         &nbsp;<strong><%=  link_to @workflow.program + " Workflows", program_path(filter: @workflow.program) , class:"text-secondary"   %></strong>
                         </li>
                       </ul>
+                        </div>
               </div>
 
-                        <div class="d-flex mb-2">
+                        <div class="d-flex mb-1">
 
 
                 </div>
@@ -50,6 +61,10 @@
                   </div>
                 </div>
                 <div>
+
+
+
+
 
             <% if Favourite.where(user_id: current_user, workflow_id: @workflow.id).exists? then %>
 

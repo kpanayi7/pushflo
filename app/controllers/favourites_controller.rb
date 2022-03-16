@@ -24,7 +24,6 @@ class FavouritesController < ApplicationController
 
     if @favourite.save
       @favourite.save!
-      flash[:notice] = "Added to Favourites ✅"
       redirect_to workflow_path(@workflow)
     else
          render :new
@@ -38,7 +37,6 @@ def destroy
 @favourite = Favourite.find(params[:id])
 @favourite.delete
     redirect_back(fallback_location: root_path)
-    flash[:notice] = "Removed from Favourites ✅"
 end
 
 

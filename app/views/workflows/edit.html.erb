@@ -1,11 +1,11 @@
-  <div class="py-2 pt-lg-6 ">
+  <div class="py-2 pt-lg-5 ">
     <div class="container">
       <div class="row">
         <div class="offset-lg-1 col-lg-10 col-md-12 col-12">
           <div class="d-lg-flex align-items-center justify-content-between">
             <!-- Content -->
             <div class="mb-4 mb-lg-0">
-              <h2 class="display-4 fw-bold ">⤴️ Submit a New Workflow</h2>
+              <h2 class="display-4 fw-bold ">📝 Edit Workflow</h2>
               <p class="mb-0 text-black lead">
 
               </p>
@@ -27,13 +27,11 @@
     <div class="container">
       <div id="courseForm" class="form-inputs text-dark-primary text-body-bold  px-12">
     <%= simple_form_for [@workflow] do |f| %>
-    <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
+    <%= f.input :title, :required => false, error_class: 'is-invalid', valid_class: 'is-valid', :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
      <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label' %>  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span>
      <%= f.input :description, label: false , :input_html => {:rows => 1} %>
-     <%= f.label :program, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
-
-    <%= f.input :program, label: false, :input_html => {:rows => 1}  %>
-    <%= f.input :program, collection: [ "Helvetica, Arial, sans-serif"]%>
+    <%= f.label :program, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
+    <%= f.input :program,label: false , collection: [ "Excel","Notion","G Sheets", "Outlook", "Chrome", "Premiere", "Xero"]%>
     <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
     <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
     <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (OPTIONAL)</span>
