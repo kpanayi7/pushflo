@@ -50,6 +50,11 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector("#loomrecord")) {
     loomUpload()
   }
+
+  if (document.querySelector("confetti")) {
+    confetti()
+  }
+
 });
 
 //$('#loom-record-sdk-button').addEventListener('click', function () {

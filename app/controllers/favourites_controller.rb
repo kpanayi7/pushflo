@@ -24,6 +24,7 @@ class FavouritesController < ApplicationController
 
     if @favourite.save
       @favourite.save!
+      sleep(1.0)
       redirect_to workflow_path(@workflow)
     else
          render :new
