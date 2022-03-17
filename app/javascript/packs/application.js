@@ -25,34 +25,37 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 // require("packs/beStepper")
-require("packs/calendar")
-require("packs/chart")
-require("packs/chat")
+// require("packs/calendar")
+// require("packs/chart")
+// require("packs/chat")
 // require("packs/customDragula")
-require("packs/jquery.downCount.min")
+// require("packs/jquery.downCount.min")
 // require("packs/main")
-require("packs/pricing")
-require("packs/sidebarMenu")
-require("packs/tnsSlider")
+// require("packs/pricing")
+// require("packs/sidebarMenu")
+// require("packs/tnsSlider")
 // const theme = require("packs/theme.min")
 // require("packs/tooltip")
 // require("packs/loom.js")
-require("packs/upload")
+// require("packs/upload")
 import {loomUpload} from "packs/loom"
-import {main} from "packs/main"
-
+import {typed} from "packs/typed"
 
 document.addEventListener('turbolinks:load', () => {
   const typedTitle = document.getElementById("title-typed")
   if (typedTitle) {
-    main()
+    typed()
   }
+
+
   if (document.querySelector("#loomrecord")) {
     loomUpload()
   }
-
-  if (document.querySelector("confetti")) {
-    confetti()
+  const confettiButton = document.getElementById("confetti")
+  if (confettiButton) {
+    confettiButton.addEventListener("click", () => {
+      confetti({ origin:{x: 0.8, y:0.9}});
+    })
   }
 
 });
