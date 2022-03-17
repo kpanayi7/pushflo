@@ -87,7 +87,7 @@
                     <%= simple_form_for [@favourite] do |f| %>
                       <%= f.hidden_field :workflow_id, value: @workflow.id %>
                       <%= f.hidden_field :user_id, value: current_user.id %>
-                       <button type="submit" class= "button-4-favourite  hvr-icon-pop" onclick="confetti({ origin:{x: 0.8, y:0.9}})" >
+                       <button type="submit" id="confetti" class= "button-4-favourite  hvr-icon-pop" >
 
 
                     <span style="color:gold;"><i class="fa fa-star fa-lg hvr-icon "></i></span>  Favourite
