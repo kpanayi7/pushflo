@@ -33,7 +33,7 @@ import "bootstrap";
 // require("packs/main")
 // require("packs/pricing")
 // require("packs/sidebarMenu")
-// require("packs/tnsSlider")
+require("packs/tnsSlider")
 // const theme = require("packs/theme.min")
 // require("packs/tooltip")
 // require("packs/loom.js")
