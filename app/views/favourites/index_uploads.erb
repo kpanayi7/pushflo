@@ -45,7 +45,7 @@
 <div class= "col-8 pl-6 pt-3 pb-2">
       <h1 class= "text-black display-5"> &nbsp; ⤴️ My Uploads</h1>
 </div>
-<div class = "col-4 text-right pr-0" style = "padding:none !important;">
+<div class = "col-4 text-right pr-2" style = "padding:none !important;">
              <%= link_to "⤴️ Upload Workflow", new_workflow_path, class:"btn btn-primary  card-hover hvr-float mr-lg-4  mt-3" %>
 </div>
 </div>
@@ -63,7 +63,7 @@
                   <div class="col-6 pl-3 ml-0 pb-2">
                     <%= will_paginate @uploads, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6 pr-0 mr-0">
 
                   <h4 class= "float-right  mr-0">💡Sorted by : <b>Most Recent</b></h4>
                   </div>
