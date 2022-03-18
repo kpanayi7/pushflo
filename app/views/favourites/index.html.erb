@@ -76,7 +76,7 @@
                     <div class="card-footer">
                       <div class="row align-items-center g-0">
                         <div class="col-auto">
-                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=current_user.first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
                           <span> <%= link_to User.find(Workflow.find(favourite.workflow_id).user_id).first_name + " " + User.find(Workflow.find(favourite.workflow_id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(favourite.workflow_id).user_id).user_name ) , class:"text-secondary"  %></span>
@@ -142,7 +142,7 @@
                     <div class="card-footer">
                       <div class="row align-items-center g-0">
                         <div class="col-auto">
-                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1645874416/Pushflo/Avatars/Copy_of_Dave_odrthq.png" class="rounded-circle avatar-xs" alt="">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=current_user.first_name%>.jpg"  class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
                           <span><%= link_to User.find(Workflow.find(upload.id).user_id).first_name + " " + User.find(Workflow.find(upload.id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(upload.id).user_id).user_name ) , class:"text-secondary" %></span>
