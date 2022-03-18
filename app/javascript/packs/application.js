@@ -54,12 +54,19 @@ document.addEventListener('turbolinks:load', () => {
   const confettiButton = document.getElementById("confetti")
   if (confettiButton) {
     confettiButton.addEventListener("click", () => {
-      confetti({ origin:{x: 0.8, y:0.9}});
+      confetti({ origin:{x: 0.75, y:0.80}});
     })
   }
+    const confettiNew = (document.querySelector("#confetti-new"))
+  if (confettiNew) {
+          confetti({ particleCount: 800,  spread: 180, origin:{x: 0.55, y:0.35}});
+    }
+
 
   const uploads_tab = document.getElementById("currentlyLearning")
     if (uploads_tab) {
+    $("#myTab").tabs();
+
     }
 
 });

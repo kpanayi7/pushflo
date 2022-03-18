@@ -30,11 +30,16 @@
     <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
       <%# <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label'  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span> %>
      <%# <%= f.input :description, label: false , :input_html => {:rows => 1} %>
+
+    <div class = "py-2">
     <%= f.label :program, :required => false, :label => "🗃️ Program / Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
+
     <%= f.input :program,label: false , collection: [ "Outlook", "Notion", "Excel", "Loom", "Xero", "Dext", "Zoom", "Photoshop", "Premiere", "Ableton Live", "Gmail", "Snagit" ]%>
+     </div>
+
     <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
     <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
-    <div class = "pb-3">
+    <div class = "pb-3 pt-2">
     <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (OPTIONAL)</span>
     <%= f.input :loom_url, label: false   %>
     </div>
@@ -46,7 +51,7 @@
 
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div>
-    <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-5  hvr-float", onclick:"confetti({ origin:{x: 0.35, y:0.95}})" %>
+    <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-5  hvr-float" %>
     </div>
     <% end %>
 </div>

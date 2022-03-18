@@ -46,10 +46,11 @@ class WorkflowsController < ApplicationController
     @workflow = Workflow.new(workflow_params)
     @workflow.user = current_user
     if @workflow.save!
-      redirect_to workflow_path(@workflow), success: '🎉 Workflow was successfully added'
+      redirect_to workflow_path(@workflow), notice: '🎉 Workflow was successfully added'
     else
       render :new
     end
+
   end
 
 
@@ -64,7 +65,7 @@ class WorkflowsController < ApplicationController
       @user = current_user
     @workflow = Workflow.find(params[:id])
      if @workflow.update(workflow_params)
-      redirect_to workflow_path(@workflow), success: '🎉 Workflow was successfully edited'
+      redirect_to workflow_path(@workflow), notice: '🎉 Workflow was successfully edited'
     else
       render action: :edit
     end

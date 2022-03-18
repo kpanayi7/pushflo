@@ -12,7 +12,7 @@
 							"></div>
 					<div
 						class="d-flex align-items-end justify-content-between bg-white px-4 pt-2 pb-4 rounded-none rounded-bottom-md shadow-sm">
-						<div class="d-flex align-items-center">
+						<div class="d-flex align-items-center mr-auto p-2">
 							<div class="me-2 position-relative d-flex justify-content-end align-items-end mt-n5">
 								<img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=current_user.first_name%>.jpg" class="avatar-xl rounded-circle border border-4 border-white"
 
@@ -27,9 +27,22 @@
 								    <p class=" mb-0 d-block"><%=@current_user.user_name%> </p>
 							</div>
 						</div>
-						<div>
-							<%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-primary  card-hover " %>
-						</div>
+					       <div class="pt-lg-2 p-2">
+             <%= link_to favourited_path(@current_user) do%>
+             <button class="btn btn-outline-secondary mr-lg-2 mt-2 mb-0 hvr-icon-forward">
+             ✨ My Favourites <span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
+                </button>
+
+            <% end %>
+            </div>
+              <div class="pt-lg-2 p-2">
+             <%= link_to uploaded_path(@current_user) do%>
+             <button class="btn btn-outline-secondary mr-lg-2 mt-2 mb-0 hvr-icon-forward">
+             ⤴️ My Uploads <span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
+                </button>
+
+            <% end %>
+            </div>
 					</div>
 				</div>
 			</div>

@@ -341,16 +341,22 @@
   transition-duration: 0.1s;
 }
 
-.btn:active {
-  background-color: #F3F4F6 !important;
 
-}
 
-.btn:active {
+.btn-outline-primary:active {
   background-color:  #754ffe !important;
   border-color: #754ffe !important;
 box-shadow: 0 0 0 0.01rem #754ffe !important;
 }
+
+
+
+.btn-primary:active {
+  background-color:  #754ffe !important;
+  border-color: #754ffe !important;
+box-shadow: 0 0 0 0.01rem #754ffe !important;
+}
+
 
 
 .homecard:hover {
