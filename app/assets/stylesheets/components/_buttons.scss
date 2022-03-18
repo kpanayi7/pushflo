@@ -340,3 +340,14 @@
   text-decoration: none;
   transition-duration: 0.1s;
 }
+
+.btn:active {
+  background-color: #F3F4F6 !important;
+
+}
+
+.btn:active {
+  background-color:  #754ffe !important;
+  border-color: #754ffe !important;
+box-shadow: 0 0 0 0.01rem #754ffe !important;
+}
