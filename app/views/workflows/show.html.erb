@@ -114,11 +114,15 @@
                     <h3 class="mb-2 pl-3 fw-semi-bold">📝 Walkthrough Notes</h3>
 
 
-                      <% if @workflow.SDprofile.key == nil then %>
-                    <%else%>
-                    <a class= "SDbutton card-hover  hvr-icon-sink ", style="", href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647376147/development/<%=@workflow.SDprofile.key%>.streamDeckProfile" title= "Download Stream Deck Profile">  <img class= "pb-1" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png">&nbsp;Download <i class="fa fa-arrow-circle-o-down fa-lg hvr-icon "></i></a>
-                    <% end %>
 
+                      <% if @workflow.SDprofile.key == nil then %>
+                    <%elsif Rails.env.development?%>
+
+                    <a class= "SDbutton card-hover  hvr-icon-sink ", style="", href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647376147/development/<%=@workflow.SDprofile.key%>.streamDeckProfile" title= "Download Stream Deck Profile">  <img class= "pb-1" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png">&nbsp;Download <i class="fa fa-arrow-circle-o-down fa-lg hvr-icon "></i></a>
+                   <%elsif Rails.env.production?%>
+
+                   <a class= "SDbutton card-hover  hvr-icon-sink ", style="", href= "https://res.cloudinary.com/dza6mn30y/raw/upload/v1647644742/production/<%=@workflow.SDprofile.key%>.streamDeckProfile" title= "Download Stream Deck Profile">  <img class= "pb-1" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png">&nbsp;Download <i class="fa fa-arrow-circle-o-down fa-lg hvr-icon "></i></a>
+                    <% end %>
 
                 </div>
 
