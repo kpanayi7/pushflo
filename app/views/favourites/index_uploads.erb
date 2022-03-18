@@ -1,5 +1,4 @@
-
-  <!-- Page Content -->
+ <!-- Page Content -->
   <div class="pt-5">
     <div class="container">
       <div class="row align-items-center">
@@ -23,14 +22,13 @@
                 <p class=" mb-0 d-block"><%=@current_user.user_name%> </p>
               </div>
             </div>
-              <div class="pt-lg-2">
-             <%= link_to uploaded_path do%>
-             <button class="btn btn-outline-secondary mr-lg-4 mt-2 mb-0  hvr-icon-forward ">
-              My Uploads  <span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
+            <div class="pt-lg-2">
+             <%= link_to favourited_path do%>
+             <button class="btn btn-outline-secondary mr-lg-2 mt-2 mb-0 hvr-icon-forward">
+             My Favourites <span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
                 </button>
 
             <% end %>
-
             </div>
           </div>
         </div>
@@ -45,10 +43,10 @@
 <div class = "row ">
 
 <div class= "col-8 pl-6 pt-3 pb-2">
-      <h1 class= "text-black display-5"> ✨ My Favourites</h1>
+      <h1 class= "text-black display-5"> &nbsp; ⤴️ My Uploads</h1>
 </div>
-
-
+<div class = "col-4 text-right pr-0" style = "padding:none !important;">
+             <%= link_to "⤴️ Upload Workflow", new_workflow_path, class:"btn btn-primary  card-hover hvr-float mr-lg-4  mt-3" %>
 </div>
 </div>
   <div class="pb-5 py-md-3">
@@ -63,45 +61,44 @@
 
                 <div class="row justify-content-center">
                   <div class="col-6 pl-3 ml-0 pb-2">
-                    <%= will_paginate @favourites, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
+                    <%= will_paginate @uploads, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
                   </div>
                   <div class="col-6">
 
                   <h4 class= "float-right  mr-0">💡Sorted by : <b>Most Recent</b></h4>
                   </div>
 
+             </div>
 
+                <% @uploads.each do |upload|%>
 
-              </div>
-                <%  @favourites.each do |favourite|%>
-                <div class="col-lg-3 col-md-6 col-12">
+                <div class="col-lg-3 col-md-6 col-12 ">
 
 
                   <!-- Card -->
                   <div class="card  mb-4 card-hover ">
-                    <iframe  class="card-img-top" src= <%= Workflow.find(favourite.workflow_id).loom_url.gsub(/\bshare\b/, 'embed') %> webkitallowfullscreen mozallowfullscreen allowfullscreen alt=""
+                    <iframe  class="card-img-top" src= <%= Workflow.find(upload.id).loom_url.gsub(/\bshare\b/, 'embed') %> webkitallowfullscreen mozallowfullscreen allowfullscreen alt=""
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
                     <div class="card-body">
-                        <h4 class="mb-1 text-truncate-line-2 text-inherit "> <%= link_to Workflow.find(favourite.workflow_id).title, workflow_path(favourite.workflow_id)%>
-
-                      </h4>
+                         <h4 class="mb-1 text-truncate-line-2 text-inherit "> <%= link_to Workflow.find(upload.id).title, workflow_path(upload.id)%>
+                         </h4>
                         <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_15/v1647351098/Pushflo/Category%20Icons/<%= Workflow.find(favourite.workflow_id).program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%= link_to Workflow.find(favourite.workflow_id).program, program_path(filter: Workflow.find(favourite.workflow_id).program), class:"text-secondary" %></strong>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_15/v1647351098/Pushflo/Category%20Icons/<%= Workflow.find(upload.id).program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%= link_to Workflow.find(upload.id).program, program_path(filter: Workflow.find(upload.id).program), class:"text-secondary"  %></strong>
 
                         </li>
                       </ul>
-                      <!-- List inline -->
+
 
                     </div>
                     <!-- Card footer -->
                     <div class="card-footer">
                       <div class="row align-items-center g-0">
                         <div class="col-auto">
-                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=current_user.first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=current_user.first_name%>.jpg"  class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span> <%= link_to User.find(Workflow.find(favourite.workflow_id).user_id).first_name + " " + User.find(Workflow.find(favourite.workflow_id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(favourite.workflow_id).user_id).user_name ) , class:"text-secondary"  %></span>
+                          <span><%= link_to User.find(Workflow.find(upload.id).user_id).first_name + " " + User.find(Workflow.find(upload.id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(upload.id).user_id).user_name ) , class:"text-secondary" %></span>
 
                         </div>
                         <div class="col-auto">
@@ -115,4 +112,30 @@
                 </div>
 
                 <% end %>
+                <div class="col-lg-3 col-md-6 col-12">
+
+                <div class="col-lg-3 col-md-6 col-12">
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+              </div>
+              </div>
+            </div>
+
+
+
+              </div>
+              <div class="row">
+                <div class="offset-lg-3 col-lg-6 col-md-12 col-12 text-center mt-5">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div class="container pt-16"> </div>

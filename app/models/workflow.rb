@@ -5,4 +5,5 @@ class Workflow < ApplicationRecord
   has_many :favourites, dependent: :destroy
   belongs_to :user
   validates :title,  :program, :loom_url, presence: true
+
 end
