@@ -3,7 +3,15 @@ class FavouritesController < ApplicationController
     before_action :find_workflow, only: %i[new create]
 
   def index
-    @favourites = Favourite.where(user: current_user)
+    @favourites = Favourite.where(user: current_user).order("created_at DESC")
+    @favourites =  @favourites.paginate(page: params[:page], per_page: 8)
+
+
+  end
+
+def index_uploads
+    @uploads = Workflow.where(user_id: current_user).order("created_at DESC")
+   @uploads =  @uploads.paginate(page: params[:page], per_page: 8)
 
   end
 

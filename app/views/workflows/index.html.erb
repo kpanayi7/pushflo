@@ -1,14 +1,20 @@
 
-
-
-
   <!-- Page header -->
   <div class=" pt-lg-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-          <div>
-            <h1 class="text-black display-4">🔎 Browse All Workflows</h1> <span></span>
+          <div class="container px-0">
+                <div class="row justify-content-center">
+                  <div class="col-6 pl-0 ml-0">
+                    <h1 class="text-black display-4">🔎 Browse All Workflows</h1>
+                  </div>
+                  <div class="col-6">
+
+                <h4 class= "float-right pt-3 mr-0">💡Sorted by : <b>Most Recent</b></h4>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -21,17 +27,22 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-12 mb-4">
           <div class="row d-lg-flex justify-content-between align-items-center">
             <div class="col-md-6 col-lg-8 col-xl-9 ">
-              <h4 class="mb-1 mb-lg-0">Displaying <%= @workflows.all.count%> Workflows</h4>
+                <h4 class="mb-1 mb-lg-0">Displaying
+                <% if @workflows.all.count < 9 %>
+                <% then  %>
+                <%= @workflows.all.count%>
+                <% else %>
+                9 Workflows
+                <% end %>   of
+                <%= @workflows.all.count %> Workflows </h4>
             </div>
-            <div class="d-inline-flex col-md-6 col-lg-4 col-xl-3 ">
+            <div class="d-flex flex-row-reverse col-md-6 col-lg-4 col-xl-3 pr-0 ">
               <div class="me-2">
-                <!-- Nav -->
-
+                  <%= will_paginate @workflows, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
               </div>
-              <!-- List  -->
-
           </div>
         </div>
+
         <!-- Content -->
         <div class="row mt-0 mt-md-4">
 				<div class="col-lg-3 col-md-4 col-12">
@@ -103,7 +114,9 @@
 							</div>
 						</div>
 					</nav>
+          <div class= "container pb-lg-20"></div>
 				</div>
+
         <!-- Tab content -->
 
         <div class="col-xl-9 col-lg-9 col-md-8 col-12">

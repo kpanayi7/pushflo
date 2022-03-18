@@ -58,6 +58,10 @@ document.addEventListener('turbolinks:load', () => {
     })
   }
 
+  const uploads_tab = document.getElementById("currentlyLearning")
+    if (uploads_tab) {
+    }
+
 });
 
 //$('#loom-record-sdk-button').addEventListener('click', function () {

@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get 'users/:id/favourites', to: 'favourites#index', as: 'favourited' do
     resources :workflows
   end
+ get 'users/:id/uploads', to: 'favourites#index_uploads', as: 'uploaded' do
+    resources :workflows
+  end
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

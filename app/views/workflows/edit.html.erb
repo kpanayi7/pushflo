@@ -28,8 +28,8 @@
       <div id="courseForm" class="form-inputs text-dark-primary text-body-bold  px-12">
     <%= simple_form_for [@workflow] do |f| %>
     <%= f.input :title, :required => false, error_class: 'is-invalid', valid_class: 'is-valid', :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
-     <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label' %>  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span>
-     <%= f.input :description, label: false , :input_html => {:rows => 1} %>
+     <%# <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label'  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span> %>
+     <%# <%= f.input :description, label: false , :input_html => {:rows => 1} %>
     <%= f.label :program, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
     <%= f.input :program,label: false , collection: [ "Excel","Notion","G Sheets", "Outlook", "Chrome", "Premiere", "Xero"]%>
     <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
@@ -48,7 +48,7 @@
 
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div>
-    <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-4  hvr-wobble-to-top-right" %>
+    <%= f.submit "🚀 Update Workflow", class: " btn btn-primary submitbutton  card-hover mt-4  hvr-float" %>
     </div>
     <% end %>
 </div>
