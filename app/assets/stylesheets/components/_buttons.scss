@@ -362,3 +362,24 @@ box-shadow: 0 0 0 0.01rem #754ffe !important;
 .homecard:hover {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)!important;
 }
+
+.confetti-canon {
+padding: 0px 0px ;
+margin: 0px 0px ;
+font-size:64px ;
+border: 0px;
+background-color:  rgba(0, 0, 0, 0);
+}
+
+.confetti-canon:hover {
+padding: 0px 0px ;
+margin: 0px 0px ;
+font-size:64px ;
+border: 0px;
+background-color: #F5F4F8;
+border-radius: 10px;
+}
+
+.confetti-canon:active {
+box-shadow: 0 0 0 0.01rem #754ffe !important;
+}

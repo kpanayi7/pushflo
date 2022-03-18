@@ -57,6 +57,16 @@ document.addEventListener('turbolinks:load', () => {
       confetti({ origin:{x: 0.75, y:0.80}});
     })
   }
+
+
+ const confetticanonButton = document.getElementById("confetti-canon")
+  if (confetticanonButton) {
+    confetticanonButton.addEventListener("click", () => {
+      confetti({ particleCount: 800,  spread: 360, origin:{x: 0.55, y:0.35}});
+    })
+  }
+
+
     const confettiNew = (document.querySelector("#confetti-new"))
   if (confettiNew) {
           confetti({ particleCount: 800,  spread: 180, origin:{x: 0.55, y:0.35}});
