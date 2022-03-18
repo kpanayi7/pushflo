@@ -30,12 +30,16 @@
     <%= f.input :title, :required => false, error_class: 'is-invalid', valid_class: 'is-valid', :label => "✨ Title*" ,:label_html => { :class => 'form_label' } %>
      <%# <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label'  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span> %>
      <%# <%= f.input :description, label: false , :input_html => {:rows => 1} %>
+    <div class = "py-2">
     <%= f.label :program, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
     <%= f.input :program,label: false , collection: [ "Excel","Notion","G Sheets", "Outlook", "Chrome", "Premiere", "Xero"]%>
+        </div>
     <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
     <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
+     <div class = "pb-3 pt-2">
     <%= f.label :loom_url, :required => false, :label => "🎥 Loom video*", :class => 'form_label' %> <span class="form_h2"> - URL link (OPTIONAL)</span>
     <%= f.input :loom_url, label: false  %>
+    </div>
     <span> <img class= "pl-2 pb-2" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png"></span><span class="form_h2"> - <strong> 🔗 STREAM DECK Profile</strong> (OPTIONAL)</span>
 
 

@@ -44,16 +44,14 @@ class WorkflowsController < ApplicationController
 
   def create
     @workflow = Workflow.new(workflow_params)
-    @workflow.user = current_user
-    if @workflow.save!
+       @workflow.user = current_user
+    if @workflow.update(workflow_params)
       redirect_to workflow_path(@workflow), notice: '🎉 Workflow was successfully added'
     else
-      render :new
+      render  :new
     end
 
   end
-
-
 
 
 
@@ -67,7 +65,7 @@ class WorkflowsController < ApplicationController
      if @workflow.update(workflow_params)
       redirect_to workflow_path(@workflow), notice: '🎉 Workflow was successfully edited'
     else
-      render action: :edit
+      render  :edit
     end
   end
 
@@ -94,6 +92,12 @@ class WorkflowsController < ApplicationController
 def update_attributes
    params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile)
 end
+
+
+
+
+
+
   def find_workflow
     @workflow = Workflow.find(params[:id])
   end
