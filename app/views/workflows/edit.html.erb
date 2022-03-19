@@ -11,8 +11,17 @@
               </p>
             </div>
                 <div>
-                  <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
-                  <%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-dark card-hover " %>
+                  <%# <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
+                  <%= link_to workflow_path do%>
+                  <button class="btn btn-outline-dark profile-back mr-lg-2 mt-2 mb-0 hvr-icon-forward">
+
+                     </i> <img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_30/v1647351098/Pushflo/Category%20Icons/<%= @workflow.program%>.png" class="pb-1 img-fluid" alt="">
+
+                   &nbsp;Back to Workflow<span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
+                  </button>
+
+                  <% end %>
+                   <%# <%= link_to "Favourites/Uploads", favourited_path(current_user), class:"btn btn-dark card-hover " %>
                 </div>
           </div>
         </div>

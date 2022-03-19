@@ -12,9 +12,9 @@
             </div>
                 <div>
                   <%# <%= link_to "Back to Profile", profile_path, class:"btn btn-primary  card-hover " %>
-                  <%= link_to profile_path do%>
-                  <button class="btn btn-outline-secondary mr-lg-2 mt-2 mb-0 hvr-icon-forward">
-                  😎 Back to Profile <span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
+                  <%= link_to uploaded_path(current_user) do%>
+                  <button class="btn btn-outline-dark profile-back mr-lg-2 mt-2 mb-0 hvr-icon-forward">
+                  <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=current_user.first_name%>.jpg" id="img-uploaded" class="avatar-sm rounded-circle" alt="" />&nbsp; Back to My Uploads<span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
                   </button>
 
                   <% end %>
