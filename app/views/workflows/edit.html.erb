@@ -41,7 +41,7 @@
      <%# <%= f.input :description, label: false , :input_html => {:rows => 1} %>
     <div class = "py-2">
     <%= f.label :program, :required => false, :label => "🗃️ Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
-    <%= f.input :program,label: false , collection: [ "Excel","Notion","G Sheets", "Outlook", "Chrome", "Premiere", "Xero"]%>
+    <%= f.input :program,label: false , collection: [ "Outlook", "Notion", "Excel", "Loom", "Xero", "Dext", "Zoom", "Photoshop", "Premiere", "Ableton Live", "Gmail", "Snagit", "G Sheets", "VS Code", "Slack"]%>
         </div>
     <%= f.label :content, :required => false, :label => "📝 Written Walkthough", :class => 'form_label'  %> <span class="form_h2"> (OPTIONAL)</span>
     <%= f.rich_text_area :content, :html => { :class => 'form_walkthrough' } %>
