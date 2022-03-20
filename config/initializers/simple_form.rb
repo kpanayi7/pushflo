@@ -173,4 +173,9 @@ SimpleForm.setup do |config|
   # Defines validation classes to the input_field. By default it's nil.
   # config.input_field_valid_class = 'is-valid'
   # config.input_field_error_class = 'is-invalid'
+
+SimpleForm::FormBuilder.map_type :image_preview, to: SimpleForm::Inputs::ImagePreviewInput
+SimpleForm::FormBuilder.map_type :attachment_preview, to: SimpleForm::Inputs::AttachmentPreviewInput
+
+
 end

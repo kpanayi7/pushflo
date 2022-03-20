@@ -40,6 +40,7 @@ require("packs/tnsSlider")
 // require("packs/upload")
 import {loomUpload} from "packs/loom"
 import {typed} from "packs/typed"
+import {previewImageOnFileSelect} from "packs/photo_preview"
 
 document.addEventListener('turbolinks:load', () => {
   const typedTitle = document.getElementById("title-typed")
@@ -78,6 +79,10 @@ document.addEventListener('turbolinks:load', () => {
     $("#myTab").tabs();
 
     }
+
+   previewImageOnFileSelect ()
+
+
 
 });
 

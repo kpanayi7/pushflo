@@ -53,8 +53,17 @@
     <span> <img class= "pl-2 pb-2" src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,h_30/v1647337283/Pushflo/Images/icons/SD_Icon_rounded_isvkcm.png"></span><span class="form_h2"> - <strong> 🔗 STREAM DECK Profile</strong> (OPTIONAL)</span>
     <%= f.input :SDprofile, as: :file,  label: false, input_html: { id: "SD-button"}, required: false %>
 
+<div class= "d-flex">
 
 
+ <div class= "pt-lg-4 align-self-center  mr-4">
+    <%= f.input :SDimage,  input_html: { class: 'd-none', id: 'photo-input'}, label_html: { class: 'upload-photo'}, label: "📷 Profile Screenshot" %>
+</div>
+
+<div class= "pt-lg-2 ">
+ <%= image_tag "", width: 100, class: "hidden", id: "photo-preview" %>
+ </div>
+</div>
 
     <%= f.hidden_field :user_id, value: current_user.id %>
     <div>

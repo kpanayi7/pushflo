@@ -401,3 +401,39 @@ padding: 10px 18px 7px 10px !important;
   border-color: #79758f !important;
   box-shadow: 0 0 0 0.01rem #79758f !important;
 }
+
+
+.upload-photo {
+  background-color: #FFFFFF;
+  border: 1px solid #e8e7ed;
+  -webkit-appearance: none;
+          appearance: none;
+  border-radius: 0.25rem;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .65rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+   cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+.upload-photo:hover {
+  background-color: #F3F4F6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+    box-shadow: 0px 0px 0px 3px rgba(231, 225, 253, 0.75);
+        border-color: #754ffe;
+  outline: 0;
+
+  border-color: #754ffe;
+
+
+}

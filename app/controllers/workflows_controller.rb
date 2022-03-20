@@ -85,12 +85,12 @@ class WorkflowsController < ApplicationController
   private
 
   def workflow_params
-    params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile)
+    params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile, :SDimage)
   end
 
 
 def update_attributes
-   params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile)
+   params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile, :SDimage)
 end
 
 
