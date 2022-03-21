@@ -1,18 +1,15 @@
 class FavouritesController < ApplicationController
-    before_action :find_favourite, only: %i[show]
-    before_action :find_workflow, only: %i[new create]
+  before_action :find_favourite, only: %i[show]
+  before_action :find_workflow, only: %i[new create]
 
   def index
     @favourites = Favourite.where(user: current_user).order("created_at DESC")
     @favourites =  @favourites.paginate(page: params[:page], per_page: 8)
-
-
   end
 
-def index_uploads
+  def index_uploads
     @uploads = Workflow.where(user_id: current_user).order("created_at DESC")
-   @uploads =  @uploads.paginate(page: params[:page], per_page: 8)
-
+    @uploads =  @uploads.paginate(page: params[:page], per_page: 8)
   end
 
   def show
@@ -21,7 +18,6 @@ def index_uploads
 
   def new
     @favourite = Favourite.new
-
   end
 
   def create
@@ -35,20 +31,16 @@ def index_uploads
       sleep(1.0)
       redirect_to workflow_path(@workflow)
     else
-         render :new
+      render :new
     end
   end
 
 
-def destroy
-
-
-@favourite = Favourite.find(params[:id])
-@favourite.delete
+  def destroy
+  @favourite = Favourite.find(params[:id])
+  @favourite.delete
     redirect_back(fallback_location: root_path)
-end
-
-
+  end
 
   private
 
@@ -57,7 +49,7 @@ end
   end
 
   def find_workflow
-      @workflow = Workflow.find(params["favourite"][:workflow_id])
+    @workflow = Workflow.find(params["favourite"][:workflow_id])
   end
 
   def favourite_params
