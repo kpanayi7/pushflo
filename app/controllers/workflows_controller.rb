@@ -5,9 +5,6 @@ class WorkflowsController < ApplicationController
     @workflows = Workflow.all.order("created_at DESC")
 
    @workflows =  @workflows.paginate(page: params[:page], per_page: 9)
-
-
-
   end
 
   def index_by_program
@@ -31,14 +28,9 @@ class WorkflowsController < ApplicationController
     end
   end
 
-
   def new
     @workflow = Workflow.new
-
   end
-
-
-
 
   def create
     @workflow = Workflow.new(workflow_params)
@@ -48,36 +40,29 @@ class WorkflowsController < ApplicationController
     else
       render  :new
     end
-
   end
-
-
 
   def edit
     @workflow_id = Workflow.find(params[:id])
   end
 
   def update
-      @user = current_user
+    @user = current_user
     @workflow = Workflow.find(params[:id])
-     if @workflow.update(workflow_params)
+    if @workflow.update(workflow_params)
       redirect_to workflow_path(@workflow), notice: '🎉 Workflow was successfully edited'
     else
       render  :edit
     end
   end
 
-
   def show
-
     @workflow = Workflow.find(params[:id])
     @favourite = Favourite.new
-
   end
 
   def uploads
     @workflows = Workflow.all
-
   end
 
   private
@@ -87,14 +72,9 @@ class WorkflowsController < ApplicationController
   end
 
 
-def update_attributes
+  def update_attributes
    params.require(:workflow).permit(:title, :description, :walkthrough, :content, :program, :loom_url, :SDprofile, :SDimage)
-end
-
-
-
-
-
+  end
 
   def find_workflow
     @workflow = Workflow.find(params[:id])
