@@ -144,10 +144,11 @@
                   <iframe  class="card-img-top"  src= <%= workflow.loom_url.gsub(/\bshare\b/, 'embed') %>  webkitallowfullscreen mozallowfullscreen allowfullscreen  alt=""
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
-                    <div class="card-body">
-                      <h4 class="mb-1 text-truncate-line-2 font-weight-bold  "><a href="" class="text-inherit"><%= link_to workflow.title, workflow_path(workflow) %></a>
+                    <div class="card-body pb-1 pt-2">
+                      <h4 class="mb-1 text-truncate-line-2 font-weight-bold  card-listing" ><a href="" class="text-inherit "><%= link_to workflow.title, workflow_path(workflow) %></a>
                       </h4>
-                       <!-- List inline -->
+
+                                          <!-- List inline -->
                       <ul class="mb-0 list-inline">
                         <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_15/v1647351098/Pushflo/Category%20Icons/<%= workflow.program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%=  link_to workflow.program, program_path(filter: workflow.program), class:"text-secondary"  %></strong>
                         </li>
@@ -155,9 +156,9 @@
 
                     </div>
                     <!-- Card footer -->
-                    <div class="card-footer">
+                    <div class="card-footer py-3">
                        <!-- Row -->
-                      <div class="row align-items-center g-0">
+                      <div class="row align-items-center g-0 ">
                         <div class="col-auto">
                       <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=User.find(workflow.user_id).first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
 
