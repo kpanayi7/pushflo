@@ -41,12 +41,22 @@ require("packs/tnsSlider")
 import {loomUpload} from "packs/loom"
 import {typed} from "packs/typed"
 import {previewImageOnFileSelect} from "packs/photo_preview"
+import {counter} from "packs/counter"
+
 
 document.addEventListener('turbolinks:load', () => {
   const typedTitle = document.getElementById("title-typed")
   if (typedTitle) {
     typed()
   }
+
+ const counterForm = document.getElementById("body-count")
+  if (counterForm) {
+    counter()
+  }
+
+
+
 
 
   if (document.querySelector("#loomrecord")) {

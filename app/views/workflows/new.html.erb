@@ -34,9 +34,15 @@
       <div id="courseForm" class="form-inputs text-dark-primary text-body-bold  px-12">
     <%= simple_form_for [@workflow] do |f| %>
     <%= f.error_notification %>
-    <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' }, :maxlength => 100 %>
+
+      <div class = "pb-2">
+    <%= f.input :title, :required => false, :label => "✨ Title*" ,:label_html => { :class => 'form_label' }, :maxlength => 50 %>
       <%# <%= f.label :description, :required => false, :label => "❓Description" , as: :text, input_html: {rows: 1},:class => 'form_label'  <span class="form_h2"> - 1 sentence headline (OPTIONAL)</span> %>
      <%# <%= f.input :description, label: false , :input_html => {:rows => 1} %>
+
+    <span id="body-count">0</span> <span> Characters - Max 50</span>
+ </div>
+
 
     <div class = "py-2">
     <%= f.label :program, :required => false, :label => "🗃️ Program / Category*", :class => 'form_label'  %> <span class="form_h2"> - which program does it relate to?</span>
