@@ -74,55 +74,132 @@
                 <!-- List -->
 								<ul class="list-unstyled ms-n2 mb-0">
 									<!-- Nav item -->
-									<li class="nav-item">
+
+                  <% if params[:filter] == "Outlook"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+                  	<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Outlook"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Outlook.png"></i>Outlook</a>
 									</li>
 									<!-- Nav item -->
+
+                  <% if params[:filter] == "Notion"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
 									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Notion"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Notion.png"></i>Notion</a>
 									</li>
 									<!-- Nav item -->
+                 <% if params[:filter] == "Excel"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
 									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Excel"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Excel.png"></i>Excel</a>
 									</li>
+									<% if params[:filter] == "Loom"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
 									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Loom"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Loom.png"></i>Loom</a>
 									</li>
 									<!-- Nav item -->
+									<% if params[:filter] == "Xero"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
 									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Xero"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Xero.png"></i>Xero</a>
 									</li>
 									<!-- Nav item -->
+									<% if params[:filter] == "Dext"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
 									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Dext"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Dext.png"></i>Dext</a>
 									</li>
 										<!-- Nav item -->
-										<li class="nav-item">
+									<% if params[:filter] == "Zoom"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 											<a class="nav-link " href="/program?filter=Zoom"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Zoom.png"></i>Zoom</a>
 										</li>
 									<!-- Nav item -->
+									<% if params[:filter] == "Photoshop"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
 									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Photoshop"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Photoshop.png"></i>Photoshop</a>
 									</li>
-                  <li class="nav-item">
+                  <% if params[:filter] == "Premiere"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Premiere"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Premiere.png"></i>Premiere</a>
 									</li>
-                  <li class="nav-item">
+                 <% if params[:filter] == "Ableton Live"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Ableton Live"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Ableton Live.png"></i>Ableton Live</a>
 									</li>
-                  <li class="nav-item">
+                 <% if params[:filter] == "Gmail"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Gmail"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Gmail.png"></i>Gmail</a>
 									</li>
-                  <li class="nav-item">
+                  <% if params[:filter] == "Snagit"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Snagit"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Snagit.png"></i>Snagit</a>
 									</li>
-                  <li class="nav-item">
+                 <% if params[:filter] == "G Sheets"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=G Sheets"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/G Sheets.png"></i>G Sheets</a>
 									</li>
-                  <li class="nav-item">
+                  <% if params[:filter] == "VS Code"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=VS Code"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/VS Code.png"></i>VS Code</a>
 									</li>
-                  <li class="nav-item">
+                <% if params[:filter] == "Slack"%>
+                    <% then %>
+									<li class="nav-item active">
+                    <%else%>
+									<li class="nav-item">
+                  <% end %>
 										<a class="nav-link" href="/program?filter=Slack"><i class="pr-1"><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_20/v1647351098/Pushflo/Category%20Icons/Slack.png"></i>Slack</a>
 									</li>
 								</ul>
