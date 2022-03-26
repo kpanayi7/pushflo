@@ -4,7 +4,7 @@ class Workflow < ApplicationRecord
   has_rich_text :content
   has_many :favourites, dependent: :destroy
   belongs_to :user
-  validates :title,  :program, :loom_url, presence: true
+  validates :title,  :program, :loom_url, :approved, presence: true
   validates_length_of :title, :maximum => 50
 
 end
