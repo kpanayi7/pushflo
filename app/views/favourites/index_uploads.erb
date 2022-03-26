@@ -52,14 +52,7 @@
   <div class="pb-5 py-md-3">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-
-
-          <!-- Tab content -->
-
-              <div class="row">
-
-                <div class="row justify-content-center">
+       <div class="row justify-content-center">
                   <div class="col-6 pl-3 ml-0 pb-2">
                     <%= will_paginate @uploads, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
                   </div>
@@ -70,9 +63,108 @@
 
              </div>
 
+      <div class="col-lg-3 col-md-4 col-12">
+					<!-- Side navbar -->
+					<nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 mb-lg-0 sidenav">
+						<!-- Menu -->
+						<a class="d-xl-none d-lg-none d-md-none text-inherit fw-bold" href="#">Menu</a>
+						<!-- Button -->
+						<button class="navbar-toggler d-md-none icon-shape icon-sm rounded bg-primary text-light" type="button"
+							data-bs-toggle="collapse" data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="fe fe-menu"></span>
+						</button>
+						<!-- Collapse navbar -->
+						<div class="collapse navbar-collapse" id="sidenav">
+							<div class="navbar-nav flex-column">
+
+								<span class="navbar-header">⚙️ Account Settings</span>
+                				<!-- List -->
+								<ul class="list-unstyled ms-n2 mb-0">
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>Edit Profile</a>
+									</li>
+								
+									<li class="nav-item">
+										<a class="nav-link" href="notifications.html"><i class="fe fe-bell nav-icon"></i>Notifications</a>
+									</li>
+									
+									
+								</ul>
+								<span class="navbar-header border-top pt-3">😍 Favourites</span>
+                				<!-- List -->
+								<ul class="list-unstyled ms-n2 mb-2">
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>My Favourites</a>
+									</li>
+			
+								</ul>
+								<span class="navbar-header border-top pt-3 ">🧐 Following</span>
+                				<!-- List -->
+								<ul class="list-unstyled ms-n2 mb-2">
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>My Programs</a>
+									</li>
+								<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>My Creators</a>
+									</li>
+			
+								</ul>
+								<span class="navbar-header border-top pt-3">⤴️ My Uploads</span>
+                				<!-- List -->
+								<ul class="list-unstyled ms-n2 mb-2">
+									<!-- Nav item -->
+									<li class="nav-item active">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>Live</a>
+									</li>
+								<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>Pending Review</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>Denied</a>
+									</li>
+									
+			
+								</ul>
+								<span class="navbar-header border-top pt-3">👨‍💼 Admin</span>
+                				<!-- List -->
+								<ul class="list-unstyled ms-n2 mb-4">
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>To Review</a>
+									</li>
+								
+									
+			
+								</ul>
+							</div>
+						</div>
+					</nav>
+				</div>
+
+
+
+
+
+
+        <div class="col-xl-9 col-lg-9 col-md-8 col-12">
+
+
+          <!-- Tab content -->
+
+              <div class="row">
+
+               
+
                 <% @uploads.each do |upload|%>
 
-                <div class="col-lg-3 col-md-6 col-12 ">
+                <div class="col-lg-4 col-md-6 col-12 ">
 
 
                   <!-- Card -->
