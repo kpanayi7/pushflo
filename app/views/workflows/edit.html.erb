@@ -59,7 +59,7 @@
 
 
 
-    <%= f.hidden_field :user_id, value: User.find(@workflow.user_id) %>
+    <%= f.hidden_field :user_id, value: User.find(@workflow.user_id).id %>
     <div>
     <%= f.submit "🚀 Update Workflow", class: " btn btn-primary submitbutton  card-hover mt-4  hvr-float" %>
     </div>
