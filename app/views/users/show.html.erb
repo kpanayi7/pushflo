@@ -49,8 +49,8 @@
 	<!-- Content -->
 	<div class="row mt-0 mt-md-4">
 				<div class="col-lg-3 col-md-4 col-12">
-					<!-- Side navbar -->
-					<nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 mb-lg-0 sidenav">
+							<!-- Side navbar -->
+					<nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 pb-lg-2 sidenav">
 						<!-- Menu -->
 						<a class="d-xl-none d-lg-none d-md-none text-inherit fw-bold" href="#">Menu</a>
 						<!-- Button -->
@@ -63,7 +63,7 @@
 						<div class="collapse navbar-collapse" id="sidenav">
 							<div class="navbar-nav flex-column">
 
-								<span class="navbar-header">⚙️Account Settings</span>
+								<span class="navbar-header">⚙️ Account Settings</span>
                 				<!-- List -->
 								<ul class="list-unstyled ms-n2 mb-0">
 									<!-- Nav item -->
@@ -77,18 +77,18 @@
 									
 									
 								</ul>
-								<span class="navbar-header">😍Favourites</span>
+								<span class="navbar-header border-top pt-3">😍 Favourites</span>
                 				<!-- List -->
-								<ul class="list-unstyled ms-n2 mb-0">
+								<ul class="list-unstyled ms-n2 mb-2">
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>My Favourites</a>
+										<a class="nav-link" href="/users/<%=current_user.id%>/favourites"><i class="fe fe-settings nav-icon"></i>My Favourites</a>
 									</li>
 			
 								</ul>
-								<span class="navbar-header">🧐Following</span>
+								<span class="navbar-header border-top pt-3 ">🧐 Following</span>
                 				<!-- List -->
-								<ul class="list-unstyled ms-n2 mb-0">
+								<ul class="list-unstyled ms-n2 mb-2">
 									<!-- Nav item -->
 									<li class="nav-item">
 										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>My Programs</a>
@@ -99,12 +99,12 @@
 									</li>
 			
 								</ul>
-								<span class="navbar-header">⤴️ My Uploads</span>
+								<span class="navbar-header border-top pt-3">⤴️ My Uploads</span>
                 				<!-- List -->
-								<ul class="list-unstyled ms-n2 mb-0">
+								<ul class="list-unstyled ms-n2 mb-2">
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>Live</a>
+										<a class="nav-link" href="/users/<%=current_user.id%>/uploads"><i class="fe fe-settings nav-icon"></i>My Uploads - Live</a>
 									</li>
 								<!-- Nav item -->
 									<li class="nav-item">
@@ -117,12 +117,12 @@
 									
 			
 								</ul>
-								<span class="navbar-header ">👨‍💼 Admin</span>
+								<span class="navbar-header border-top pt-3">👨‍💼 Admin</span>
                 				<!-- List -->
-								<ul class="list-unstyled ms-n2 mb-0">
+								<ul class="list-unstyled ms-n2 mb-4">
 									<!-- Nav item -->
 									<li class="nav-item">
-										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>To Review</a>
+										<a class="nav-link" href="/unapproved"><i class="fe fe-settings nav-icon"></i>To Review</a>
 									</li>
 								
 									

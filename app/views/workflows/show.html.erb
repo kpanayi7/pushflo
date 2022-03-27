@@ -24,7 +24,7 @@
                 </h1>
              </div>
 
-                <% if @workflow.user_id == current_user.id then %>
+                <% if @workflow.user_id == current_user.id || User.find(@workflow.user_id).admin == true  then %>
              <div class="pt-3 pb-3 pl-3 align-middle">
                       <%= link_to edit_workflow_path  do %>
                     <button class="edit-button card-hover hvr-icon-grow ">

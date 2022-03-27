@@ -2,13 +2,13 @@ class WorkflowsController < ApplicationController
   before_action :find_workflow, only: [:show, :edit]
 
   def index
-    @workflows = Workflow.all.order("created_at DESC")
+    @workflows = Workflow.all.where(:approved => true ).order("created_at DESC")
     @workflows = @workflows.paginate(page: params[:page], per_page: 9)
   end
 
   def index_by_program
     if params[:filter]
-      @workflows = Workflow.where(:program => params[:filter])
+      @workflows = Workflow.where(:program => params[:filter], :approved => true )
       @workflows =  @workflows.paginate(page: params[:page], per_page: 9)
     else
       @workflows = Workflow.all
@@ -19,13 +19,28 @@ class WorkflowsController < ApplicationController
   def index_by_user
     if params[:filter]
       @user = User.where(user_name: params[:filter])
-      @workflows = Workflow.where(:user_id => @user)
+      @workflows = Workflow.where(:user_id => @user, :approved => true )
       @workflows =  @workflows.paginate(page: params[:page], per_page: 9)
     else
       @workflows = Workflow.all
       @workflows =  @workflows.paginate(page: params[:page], per_page: 9)
     end
   end
+
+  def index_by_unapproved
+      @workflows = Workflow.where(:approved => true )
+      @workflows =  @workflows.paginate(page: params[:page], per_page: 9)
+   
+  end
+
+
+  def index_by_user_unapproved
+      @user = User.where(user_name: params[:filter])
+      @workflows = Workflow.where(:user_id => @user, :approved => true )
+      @workflows =  @workflows.paginate(page: params[:page], per_page: 9)
+    
+  end
+
 
   def new
     @workflow = Workflow.new

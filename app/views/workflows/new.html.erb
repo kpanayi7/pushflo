@@ -71,11 +71,33 @@
  </div>
 </div>
 
-    <%= f.hidden_field :user_id, value: current_user.id %>
+<%= f.hidden_field :user_id, value: current_user.id %>
+
+<% if current_user.admin? %>
+<%= f.hidden_field :approved, :value => true %>
+<%else%>%  
+<%f.hidden_field :approved, :value => false %>
+<% end %>
+
+<%= f.hidden_field :user_id, value: current_user.id %>
+
+<% if current_user.admin? %>
+<%then %>
+  
+
     <div>
     <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-5  hvr-float" %>
     </div>
-    <% end %>
+  
+
+  <% else %>
+  <div>
+    <%= f.submit "🚀 Submit Workflow", class: " btn btn-primary submitbutton  card-hover mt-5  hvr-float" %>
+    </div>
+
+<% end %>
+<% end %>
+
 </div>
 
 <div class="container pt-20"> </div>

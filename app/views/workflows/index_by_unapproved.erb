@@ -17,14 +17,14 @@
                   alt="">
               </div>
               <div class="lh-1">
-                <h2 class="mb-0"><%=@current_user.first_name%> <%=@current_user.last_name%>
+                <h2 class="mb-0"><%=current_user.first_name%> <%=current_user.last_name%>
 
                 </h2>
-                <p class=" mb-0 d-block"><%=@current_user.user_name%> </p>
+                <p class=" mb-0 d-block"><%=current_user.user_name%> </p>
               </div>
             </div>
               <div class="pt-lg-2">
-             <%= link_to uploaded_path do%>
+             <%= link_to uploaded_path(:id => current_user.id) do%>
              <button class="btn btn-outline-secondary mr-lg-4 mt-2 mb-0  hvr-icon-forward ">
               ⤴️ My Uploads  <span>&nbsp;<i class = ""></i></span> <i class = "fa fa-chevron-circle-right fa-lg hvr-icon"></i>
                 </button>
@@ -45,7 +45,7 @@
 <div class = "row ">
 
     <div class= "col-8 pl-6 pt-3 pb-2">
-          <h1 class= "text-black display-5"> ✨ My Favourites</h1>
+          <h1 class= "text-black display-5">👨‍💼 Awaiting Approval</h1>
     </div>
 
       <div class="col-4 pr-0 mr-0">
@@ -67,7 +67,7 @@
 
                 <div class="row justify-content-center">
                   <div class="col-6 pl-3 ml-0 pb-2">
-                    <%= will_paginate @favourites, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
+                    <%= will_paginate @workflows, renderer: WillPaginate::ActionView::BootstrapLinkRenderer , class: "container pb-lg-20 mr-0" %>
                   </div>
                  
 
@@ -75,7 +75,7 @@
               </div>
               <div class="col-lg-3 col-md-4 col-12">
 								<!-- Side navbar -->
-					<nav class="navbar navbar-expand-md navbar-light shadow-sm mb-12 pb-lg-2 sidenav">
+					<nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 pb-lg-2 sidenav">
 						<!-- Menu -->
 						<a class="d-xl-none d-lg-none d-md-none text-inherit fw-bold" href="#">Menu</a>
 						<!-- Button -->
@@ -106,7 +106,7 @@
                 				<!-- List -->
 								<ul class="list-unstyled ms-n2 mb-2">
 									<!-- Nav item -->
-									<li class="nav-item active">
+									<li class="nav-item">
 										<a class="nav-link" href="/users/<%=current_user.id%>/favourites"><i class="fe fe-settings nav-icon"></i>My Favourites</a>
 									</li>
 			
@@ -146,8 +146,8 @@
                 				<!-- List -->
 								<ul class="list-unstyled ms-n2 mb-4">
 									<!-- Nav item -->
-									<li class="nav-item">
-										<a class="nav-link" href="/unapproved"><i class="fe fe-settings nav-icon"></i>To Review</a>
+									<li class="nav-item active">
+										<a class="nav-link" href="profile-edit.html"><i class="fe fe-settings nav-icon"></i>To Review</a>
 									</li>
 								
 									
@@ -157,28 +157,30 @@
 						</div>
 					</nav>
 				</div>
-   <div class="col-xl-9 col-lg-9 col-md-8 col-12  px-0">
+        
+<div class="col-xl-9 col-lg-9 col-md-8 col-12  px-0">
 
 
           <!-- Tab content -->
 
               <div class="row">
 
-                <%  @favourites.each do |favourite|%>
+
+                <%  @workflows.each do |workflow|%>
                 <div class="col-lg-4 col-md-6 col-12">
 
 
                   <!-- Card -->
                   <div class="card  mb-4 card-hover ">
-                    <iframe  class="card-img-top" src= <%= Workflow.find(favourite.workflow_id).loom_url.gsub(/\bshare\b/, 'embed') %> webkitallowfullscreen mozallowfullscreen allowfullscreen alt=""
+                    <iframe  class="card-img-top" src= <%= workflow.loom_url.gsub(/\bshare\b/, 'embed') %> webkitallowfullscreen mozallowfullscreen allowfullscreen alt=""
                         class="card-img-top rounded-top-md"></iframe>
                     <!-- Card body -->
                     <div class="card-body">
-                        <h4 class="mb-1 text-truncate-line-2 text-inherit "> <%= link_to Workflow.find(favourite.workflow_id).title, workflow_path(favourite.workflow_id)%>
+                        <h4 class="mb-1 text-truncate-line-2 text-inherit "> <%= link_to workflow.title, workflow_path(workflow.id)%>
 
                       </h4>
                         <ul class="mb-0 list-inline">
-                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_15/v1647351098/Pushflo/Category%20Icons/<%= Workflow.find(favourite.workflow_id).program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%= link_to Workflow.find(favourite.workflow_id).program, program_path(filter: Workflow.find(favourite.workflow_id).program), class:"text-secondary" %></strong>
+                        <li class="list-inline-item"><i class="mdi mdi-clock-time-four-outline text-muted"></i><img src="https://res.cloudinary.com/dza6mn30y/image/upload/c_scale,w_15/v1647351098/Pushflo/Category%20Icons/<%= workflow.program%>.png" class="pb-1 img-fluid" alt="">&nbsp;<strong><%= link_to workflow.program, program_path(filter: workflow.program), class:"text-secondary" %></strong>
 
                         </li>
                       </ul>
@@ -189,10 +191,10 @@
                     <div class="card-footer">
                       <div class="row align-items-center g-0">
                         <div class="col-auto">
-                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=User.find(Workflow.find(favourite.workflow_id).user_id).first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
+                          <img src="https://res.cloudinary.com/dza6mn30y/image/upload/v1646777172/Pushflo/Avatars/<%=User.find(workflow.user_id).first_name%>.jpg" class="rounded-circle avatar-xs" alt="">
                         </div>
                         <div class="col ms-2">
-                          <span> <%= link_to User.find(Workflow.find(favourite.workflow_id).user_id).first_name + " " + User.find(Workflow.find(favourite.workflow_id).user_id).last_name, user_workflows_path(filter:User.find(Workflow.find(favourite.workflow_id).user_id).user_name ) , class:"text-secondary"  %></span>
+                          <span> <%= link_to User.find(workflow.user_id).first_name + " " + User.find(workflow.user_id).last_name, user_workflows_path(filter:User.find(workflow.user_id).user_name) , class:"text-secondary"  %></span>
                         </div>
                         <div class="col-auto">
                           <a href="#" class="removeBookmark">

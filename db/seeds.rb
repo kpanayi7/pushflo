@@ -83,7 +83,8 @@ puts "created user"
     walkthrough: "This pack will take you through some of the best shortcuts to speed up the creation of videos with Loom. From automating record on/off to turning on your lights and throwing in some confetti",
     program: "Loom",
     loom_url:"https://www.loom.com/share/6cceaf0c4d884f8a9a1b1995c1444efb",
-    user: dave
+    user: dave,
+    approved: true
   )
   puts "created workflow"
 
@@ -93,7 +94,8 @@ puts "created user"
     walkthrough: "Getting your headings out for the lads - this will supercharge your headings in Outlook",
     program: "Outlook",
     loom_url:"https://www.loom.com/share/3faebe6e53fc47cc8a2822101d0bb7c8",
-    user: dave
+    user: dave,
+    approved: true
   )
   puts "created workflow"
 
@@ -104,7 +106,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh borders on the fly",
     program: "Excel",
     loom_url:"https://www.loom.com/share/eaf6d9b477bc4c478493bcf484f3a191",
-    user: dave
+    user: dave,
+    approved: true
 )
   puts "created workflow"
 
@@ -116,7 +119,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh borders on the fly",
     program: "Excel",
     loom_url:"https://www.loom.com/share/eaf6d9b477bc4c478493bcf484f3a191",
-    user: kyri
+    user: kyri,
+    approved: true
 )
   puts "created workflow"
 
@@ -126,7 +130,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh borders on the fly",
     program: "Excel",
     loom_url:"https://www.loom.com/share/eaf6d9b477bc4c478493bcf484f3a191",
-    user: kyri
+    user: kyri,
+    approved: true
 )
   puts "created workflow"
 
@@ -138,7 +143,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh Notion shortcuts on the fly",
     program: "Notion",
     loom_url:"https://www.loom.com/share/afa9ffb550e24441867577d5fa033c52",
-    user: kyri
+    user: kyri,
+    approved: true
 )
   puts "created workflow"
 
@@ -150,7 +156,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh Notion shortcuts on the fly",
     program: "Notion",
     loom_url:"https://www.loom.com/share/afa9ffb550e24441867577d5fa033c52",
-    user: nelson
+    user: nelson,
+    approved: true
 )
   puts "created workflow"
 
@@ -161,7 +168,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh Notion shortcuts on the fly",
     program: "Notion",
     loom_url:"https://www.loom.com/share/afa9ffb550e24441867577d5fa033c52",
-    user: nelson
+    user: nelson,
+    approved: true
 )
   puts "created workflow"
 
@@ -172,7 +180,8 @@ Workflow.create!(
     walkthrough: "This is how you bosh Gmail textstings on the fly",
     program: "Gmail",
     loom_url:"https://www.loom.com/share/fedc02d5b2214ee0b20c34aa5f3eace8",
-    user: roel
+    user: roel,
+    approved: true
 )
   puts "created workflow"
 
